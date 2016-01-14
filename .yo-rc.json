@@ -1,0 +1,14 @@
+{
+  "generator-angular-meteor": {
+    "filters": {
+      "js": true,
+      "jade": true,
+      "scss": true,
+      "pagination": true,
+      "framework": "none",
+      "bower": false,
+      "auth": true
+    },
+    "appname": "mixTapes20"
+  }
+}
