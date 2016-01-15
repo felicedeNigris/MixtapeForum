@@ -25,4 +25,15 @@ Meteor.startup(function(){
       })
   }
 
+  // Configure Spotify service
+  ServiceConfiguration.configurations.update(
+    { "service": "spotify" },
+    {
+      $set: {
+        "clientId": "d12a078de127492693230ee1b9a1380e",
+        "secret": "9f1653c2a10f4cb1af814974195c4d87"
+      }
+    },
+    { upsert: true }
+  );
 })

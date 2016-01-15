@@ -2,10 +2,11 @@
 
 angular.module('mixtapes')
 
-.config(function($urlRouterProvider, $locationProvider) {
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/');
-}).run(['$rootScope', '$state', function($rootScope, $state) {
+.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
+  $locationProvider.html5Mode(true)
+
+  $urlRouterProvider.otherwise('/')
+}).run(function($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
     switch(error) {
       case 'AUTH_REQUIRED':
@@ -14,5 +15,5 @@ angular.module('mixtapes')
         $state.go('main');
         break;
     }
-  });
-}]);
+  })
+})

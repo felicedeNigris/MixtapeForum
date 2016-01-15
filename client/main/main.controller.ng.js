@@ -4,13 +4,13 @@ angular.module('mixtapes')
 .controller('MixList', MixList)
 
 //The list of Mixtapes
-function MixList($scope,$meteor){
+function MixList($scope,$meteor,$window){
   //list of tracks in mongo database
   $scope.tracks = $meteor.collection(function(){
     return Tracks.find({}, {sort: {createdAt: -1 }})
   })
 
-  $scope.createMixTape = function(newTrack){
+  $scope.createMixTape = function(newTrack,$window){
     //create a mixtape
     $scope.tracks.push({
       name: newTrack.name,
@@ -18,6 +18,7 @@ function MixList($scope,$meteor){
       creator: newTrack.creator
     })
     $scope.newTrack = {}
+    $window.location.pathname ='/'
   }
   $scope.deleteMixTape = function(track){
     //delete a mixtape
@@ -30,53 +31,21 @@ function MixList($scope,$meteor){
     $scope.track = {}
 
   }
+  $scope.isOwner = function(track){
+    return track.owner === Meteor.userId()
+  }
+
+
+
+  // $scope.myMixes = $meteor.collection(function(){
+  //   var user = Meteor.users.find(this.userId)
+  //   return Tracks.filter({groupId: user.profile.groupId})
+  // })
 }
 
-// .controller('MainCtrl', function($scope) {
-//   $scope.page = 1
-//   $scope.perPage = 3
-//   $scope.sort = {name_sort : 1};
-//   $scope.orderProperty = '1'
+// Meteor.publish('groupItems', function () {
+//   if ( ! this.userId ) return [];  //return an empty array if no user is logged in.
 //
-//   $scope.helpers({
-//     things: function() {
-//       return Things.find({}, {
-//         sort: $scope.getReactively('sort')
-//       });
-//     },
-//     thingsCount: function() {
-//       return Counts.get('numberOfThings');
-//     }
-//   });
-//
-//   $scope.subscribe('things', function() {
-//     return [{
-//       sort: $scope.getReactively('sort'),
-//       limit: parseInt($scope.getReactively('perPage')),
-//       skip: ((parseInt($scope.getReactively('page'))) - 1) * (parseInt($scope.getReactively('perPage')))
-//     }, $scope.getReactively('search')];
-//   });
-//
-//   $scope.save = function() {
-//     if ($scope.form.$valid) {
-//       Things.insert($scope.newThing);
-//       $scope.newThing = undefined;
-//     }
-//   };
-//
-//   $scope.remove = function(thing) {
-//     Things.remove({_id: thing._id});
-//   };
-//
-//   $scope.pageChanged = function(newPage) {
-//     $scope.page = newPage;
-//   };
-//
-//   return $scope.$watch('orderProperty', function() {
-//     if ($scope.orderProperty) {
-//       $scope.sort = {
-//         name_sort: parseInt($scope.orderProperty)
-//       };
-//     }
-//   });
+//   var user = Meteor.users.find( this.userId );
+//   return Items.filter({ groupId : user.profile.groupId });
 // });

@@ -19,6 +19,22 @@ angular.module('mixtapes')
     url:'/create',
     templateUrl: "client/create-a-mix/mixtapeform.html",
     controller:'MixList',
+    resolve: {
+        currentUser: ($q)=>{
+          if(Meteor.userId() === null){
+            //won't allow user to create a post unless logged in
+            return $q.reject('AUTH_REQUIRED')
+          }
+          else{
+            return $q.resolve()
+          }
+        }
+    }// end resolve
+  })
+  .state('mymixes',{
+    url:'/mymixes',
+    templateUrl: 'client/mymixes/mymixtapes.html',
+    controller: 'MixList',
     //controllerAs:'vm'
   })
 })

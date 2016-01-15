@@ -22,6 +22,7 @@ tmeasday:publish-counts
 angularutils:pagination
 accounts-password
 dotansimha:accounts-ui-angular
-insecure
-autopublish
 xinranxiao:accounts-spotify
+#insecure
+service-configuration
+autopublish
