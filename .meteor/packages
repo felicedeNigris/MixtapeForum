@@ -20,9 +20,8 @@ fourseven:scss
 civilframe:angular-jade
 tmeasday:publish-counts
 angularutils:pagination
-accounts-password
 dotansimha:accounts-ui-angular
-xinranxiao:accounts-spotify
-#insecure
 service-configuration
 autopublish
+xinranxiao:accounts-spotify
+accounts-password
