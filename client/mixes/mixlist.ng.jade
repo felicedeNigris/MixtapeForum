@@ -11,3 +11,4 @@ div(ng-repeat="track in tracks")
     button(ng-click="deleteMixTape(track)") Delete
     button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true") Edit this Mix
     button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false") Save Edit
+    button(ui-sref="thisMix({mixId:track._id})") Go to this Mix

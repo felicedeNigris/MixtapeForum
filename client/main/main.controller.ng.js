@@ -10,6 +10,13 @@ function MixList($scope,$meteor,$location){
     return Tracks.find({}, {sort: {createdAt: -1 }})
   })
 
+  //this block controls the okmodal directive
+  $scope.modalShown = false;
+  $scope.toggleModal = function(){
+    //turns off modal directive
+    $scope.modalShown = !$scope.modalShown;
+  }// end okmodal controls
+
   $scope.createMixTape = function(newTrack){
     //create a mixtape
     $scope.tracks.push({
@@ -18,6 +25,7 @@ function MixList($scope,$meteor,$location){
       creator: newTrack.creator
     })
     $scope.newTrack = {}
+    $scope.toggleModal() // turn on modal
     $location.path('/mymixes')
   }//end createMixTape
 

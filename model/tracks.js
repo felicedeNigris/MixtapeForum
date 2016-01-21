@@ -16,12 +16,3 @@ Tracks.allow({
     return track.owner === userId //if you created it & signedIn you can delete
   }
 });
-
-
-// var options = {
-//   showDialog: true, // Whether or not to force the user to approve the app again if they’ve already done so.
-//   requestPermissions: ['user-read-email'] // Spotify access scopes.
-// };
-// Meteor.loginWithSpotify(options, function(accessToken) {
-//   console.log(accessToken);
-// });
