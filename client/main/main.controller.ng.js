@@ -1,31 +1,26 @@
 'use strict'
 
 angular.module('mixtapes')
-.controller('MixList', MixList)
+  .controller('MixList', MixList)
+
 
 //The list of Mixtapes
 function MixList($scope,$meteor,$location){
+
   //list of tracks in mongo database
   $scope.tracks = $meteor.collection(function(){
     return Tracks.find({}, {sort: {createdAt: -1 }})
-  })
+  }).subscribe("tracks") //subscribe to the servers tracks.js
 
-  //this block controls the okmodal directive
-  $scope.modalShown = false;
-  $scope.toggleModal = function(){
-    //turns off modal directive
-    $scope.modalShown = !$scope.modalShown;
-  }// end okmodal controls
 
   $scope.createMixTape = function(newTrack){
     //create a mixtape
-    $scope.tracks.push({
+      $scope.tracks.push({
       name: newTrack.name,
       playlist: newTrack.playlist,
       creator: newTrack.creator
     })
     $scope.newTrack = {}
-    $scope.toggleModal() // turn on modal
     $location.path('/mymixes')
   }//end createMixTape
 
@@ -42,6 +37,13 @@ function MixList($scope,$meteor,$location){
 
   }//end editMixTape
 
+
+  /*****************************************************
+    This is an angular filter which checks if a user is
+    signed In.
+    This filter is used in mymixes.jade to filter only
+    mixes created by the user
+  *****************************************************/
   $scope.isOwner = function(track){
     return track.owner === Meteor.userId()
   }//end isOwner

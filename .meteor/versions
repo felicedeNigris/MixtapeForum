@@ -9,7 +9,6 @@ angular-templates@0.0.3
 angular:angular@1.4.8
 angularui:angular-ui-router@0.2.15
 angularutils:pagination@0.9.1_2
-autopublish@1.0.4
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -95,3 +94,4 @@ webapp@1.2.3
 webapp-hashing@1.0.5
 xinranxiao:accounts-spotify@1.0.2
 xinranxiao:spotify@1.0.2
+xinranxiao:spotify-web-api@1.0.2

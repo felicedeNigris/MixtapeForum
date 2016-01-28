@@ -22,6 +22,6 @@ tmeasday:publish-counts
 angularutils:pagination
 dotansimha:accounts-ui-angular
 service-configuration
-autopublish
 xinranxiao:accounts-spotify
 accounts-password
+xinranxiao:spotify-web-api

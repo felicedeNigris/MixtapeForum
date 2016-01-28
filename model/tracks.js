@@ -5,14 +5,17 @@ Tracks.allow({
     track.createdAt = new Date();
     track.name_sort = track.name.toLowerCase()
     track.owner = userId
+    track.creator = Meteor.user().profile.id || Meteor.user().emails[0].address
+    //Meteor.user().emails[0].address     felideni@gmail.com
+    //Meteor.user().profile.id           felideni
     return userId //if signedIn you can post
   },
   update: function(userId, track, fields, modifier) {
     track.createdAt = new Date()
     track.name_sort = track.name.toLowerCase()
-    return userId === track.owner //if you created it & signedIn you can edit
+    return userId && track.owner === userId //if you created it & signedIn you can edit
   },
   remove: function(userId, track) {
-    return track.owner === userId //if you created it & signedIn you can delete
+    return userId && track.owner === userId //if you created it & signedIn you can delete
   }
-});
+})
