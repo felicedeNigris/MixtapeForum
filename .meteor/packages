@@ -23,5 +23,6 @@ angularutils:pagination
 dotansimha:accounts-ui-angular
 service-configuration
 xinranxiao:accounts-spotify
-accounts-password
+#accounts-password
 xinranxiao:spotify-web-api
+urigo:angular-blaze-template

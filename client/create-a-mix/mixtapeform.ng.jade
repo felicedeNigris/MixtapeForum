@@ -7,3 +7,5 @@ div(class="mix-container")
     label Link to your Mix
     input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-model="newTrack.playlist")
     button(type="button" id="mixplaylist" ng-click="createMixTape(newTrack)") Upload a playlist
+    
+  div(ng-include="'client/helloTemplate.html'")
