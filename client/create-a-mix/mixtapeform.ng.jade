@@ -8,4 +8,7 @@ div(class="mix-container")
     input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-model="newTrack.playlist")
     button(type="button" id="mixplaylist" ng-click="createMixTape(newTrack)") Upload a playlist
     
-  div(ng-include="'client/helloTemplate.html'")
+    
+  button(type="button" ng-click="getElvis()") Get Elvis
+  
+  button(type="button" ng-click="getUserPlaylists()") Get Playlists

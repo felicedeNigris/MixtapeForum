@@ -39,6 +39,29 @@ function MixList($scope,$meteor,$location){
   $scope.isOwner = function(track){
     return track.owner === Meteor.userId()
   }//end isOwner
+
+  $scope.getElvis = function(){
+    Meteor.call('getElvis',function(err,data){
+      if(err){
+        console.log('failed ', err)
+      }
+      else{
+        console.log('success ', data)
+      }
+    })
+  }
+
+  $scope.getUserPlaylists = function(){
+    Meteor.call('getUserPlaylists',(err,data)=>{
+      if(err){
+        console.log('playlist retrieval failed ',err)
+      }
+      else{
+        console.log('Success ',data)
+      }
+    })
+  }
+  
 }
 
 
