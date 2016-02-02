@@ -40,6 +40,16 @@ function MixList($scope,$meteor,$location){
     return track.owner === Meteor.userId()
   }//end isOwner
 
+
+  $scope.modalShow = false //access modal from delete button
+
+  $scope.toggleModal = function(){
+    $scope.modalShow = !$scope.modalShow
+  }
+
+  $scope.yesDelete = function(track){
+      $scope.tracks.remove({_id: track._id})
+  }
   $scope.getElvis = function(){
     Meteor.call('getElvis',function(err,data){
       if(err){
@@ -61,7 +71,7 @@ function MixList($scope,$meteor,$location){
       }
     })
   }
-  
+
 }
 
 
