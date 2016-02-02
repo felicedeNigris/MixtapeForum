@@ -47,6 +47,11 @@ function MixList($scope,$meteor,$location){
     $scope.modalShow = !$scope.modalShow
   }
 
+  $scope.showDelete = false //show settings for delete button
+
+  $scope.toggleDelete = function(track){
+    $scope.showDelete = !$scope.showDelete
+  }
   $scope.yesDelete = function(track){
       $scope.tracks.remove({_id: track._id})
   }

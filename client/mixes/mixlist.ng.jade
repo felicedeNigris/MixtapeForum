@@ -1,6 +1,6 @@
 div(ng-repeat="track in tracks")
-  ul
-    li 
+  ul(ng-click="toggleDelete(track)" style="cursor: pointer")
+    li
       p {{'Mixtape name: ' + track.name}}
       input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-hide="!EditMix" ng-model="track.name" required)
     li 
@@ -9,9 +9,9 @@ div(ng-repeat="track in tracks")
     li 
       p {{'Created by :'}} {{track.authorname === null ? track.authorid : track.authorname }}
     div(ng-hide="!isOwner(track)")
-      button(ng-click="toggleModal()") Delete 
+      button(ng-click="toggleModal()" ng-show="showDelete") Delete 
       suremodal(ng-click="toggleModal()")
-      button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true") Edit this Mix
+      button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true" ng-show="showDelete") Edit this Mix
       button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false") Save Edit
     button(ui-sref="thisMix({mixId:track._id})") Go to this Mix
 
