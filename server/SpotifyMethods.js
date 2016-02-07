@@ -31,10 +31,9 @@ Meteor.methods({
         console.log("Success, your playlist ", data.body)
       }
     })
-
     return userplaylists
   }//end getUserPlaylists
-
+  
 
 })//end Meteor.methods
 

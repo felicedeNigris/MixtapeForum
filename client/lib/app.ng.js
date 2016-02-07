@@ -3,6 +3,7 @@ angular.module('mixtapes', [
   'ui.router',
   'angularUtils.directives.dirPagination',
   'accounts.ui',
+  'angular-blaze-template'
 ])
 
 onReady = function() {

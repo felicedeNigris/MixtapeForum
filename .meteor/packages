@@ -8,13 +8,11 @@ meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
 mongo                   # The database Meteor supports right now
 session                 # Client-side reactive dictionary for your app
-jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
 
 standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
-angular
 angularui:angular-ui-router
 fourseven:scss
 civilframe:angular-jade
@@ -26,3 +24,7 @@ xinranxiao:accounts-spotify
 #accounts-password
 xinranxiao:spotify-web-api
 urigo:angular-blaze-template
+blaze-html-templates
+angular-with-blaze
+#angular-templates
+pbastowski:angular-babel

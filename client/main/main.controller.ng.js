@@ -72,16 +72,24 @@ function MixList($scope,$meteor,$location){
         console.log('playlist retrieval failed ',err)
       }
       else{
-        console.log('Success ',data)
+        console.log('Success ',data.body)
       }
+      return data.body
     })
+     Session.set("playlists", data.body);
   }
+
+  $scope.rappers = [
+    {name:'Kanye West'},
+    {name:'JayZ'},
+    {name: 'Drake'},
+    {name:'Kendrick Lamar'}
+  ]
 
 }
 
-
-// Template.test.helpers({
-//   mixes: function(){
-//     return Template.currentData().getReactively('tracks', true)
-//   }
-// })
+Template.rappers.helpers({
+  rappers: function(){
+    return "Some Text"
+  }
+})
