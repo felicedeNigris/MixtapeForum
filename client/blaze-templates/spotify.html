@@ -1,0 +1,11 @@
+<template name="playlists">
+  Your playlists
+  {{# each playlists.items}}
+    <div>
+      <img src="{{images.[0].url}}" style="{width:50px}">
+    </div>
+    <div>
+      {{name}}
+    </div>
+  {{/each}}
+</template>

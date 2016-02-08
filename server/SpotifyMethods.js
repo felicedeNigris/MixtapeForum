@@ -23,7 +23,7 @@ Meteor.methods({
     // Get a user's playlists
     let spotifyApi = new SpotifyWebApi()
 
-    let userplaylists = spotifyApi.getUserPlaylists('felideni',function(err,data){
+    let userplaylists = spotifyApi.getUserPlaylists(Meteor.user().profile.id,function(err,data){
       if(err){
         console.log("Retrieval error ", err)
       }
@@ -33,7 +33,7 @@ Meteor.methods({
     })
     return userplaylists
   }//end getUserPlaylists
-  
+
 
 })//end Meteor.methods
 

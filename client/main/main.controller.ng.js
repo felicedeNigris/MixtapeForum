@@ -5,7 +5,7 @@ angular.module('mixtapes')
 
 
 //The list of Mixtapes
-function MixList($scope,$meteor,$location){
+function MixList($scope,$meteor,$location,$reactive){
 
   //list of tracks in mongo database
   $scope.tracks = $meteor.collection(function(){
@@ -79,17 +79,7 @@ function MixList($scope,$meteor,$location){
      Session.set("playlists", data.body);
   }
 
-  $scope.rappers = [
-    {name:'Kanye West'},
-    {name:'JayZ'},
-    {name: 'Drake'},
-    {name:'Kendrick Lamar'}
-  ]
+  $scope.rappers = 'Kanye West'
+
 
 }
-
-Template.rappers.helpers({
-  rappers: function(){
-    return "Some Text"
-  }
-})
