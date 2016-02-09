@@ -8,11 +8,8 @@ div(class="mix-container")
     input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-model="newTrack.playlist")
     button(type="button" id="mixplaylist" ng-click="createMixTape(newTrack)") Upload a playlist
     
-    
-  button(type="button" ng-click="getElvis()") Get Elvis
+  //- button(type="button" ng-click="getUserPlaylists()") Get Playlists
+  br
+  br
   
-  button(type="button" ng-click="getUserPlaylists()") Get Playlists
-  
-  div(ng-include="rappers.ng.html")
-
   | <blaze-template name="playlists"></blaze-template>

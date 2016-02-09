@@ -7,4 +7,4 @@ ServiceConfiguration.configurations.update(
     }
   },
   { upsert: true }
-);
+)

@@ -14,17 +14,16 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
 angularui:angular-ui-router
-fourseven:scss
 civilframe:angular-jade
 tmeasday:publish-counts
 angularutils:pagination
 dotansimha:accounts-ui-angular
 service-configuration
 xinranxiao:accounts-spotify
-#accounts-password
 xinranxiao:spotify-web-api
 urigo:angular-blaze-template
 blaze-html-templates
 angular-with-blaze
 #angular-templates
 pbastowski:angular-babel
+fourseven:scss
