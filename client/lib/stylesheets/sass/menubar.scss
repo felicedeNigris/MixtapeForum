@@ -11,10 +11,18 @@
   border-right: none;
   border-left: none;
   display:flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: stretch;
+}
+.m-toolbar span{
+  position: relative;
+  top: 35%;
+  margin: 0px;
+
 }
 
 .c-menu-button{
-  position: flex;
   border-width: 5px;
   border-style: solid;
   border-color: $seafoam;
@@ -22,7 +30,48 @@
   height: 80px;
   padding: 10px;
   text-decoration: none;
+  margin-right: 10px;
   color: $seafoam;
-  
+  font-size: 1.3em;
+  align-items:center;
+  &:hover, &:focus{
+    transition: all 0.3s ease-in;
+    background-color: $accentGrey;
+    color: $seafoam;
+    border-color: $accentGrey;
+  }
+}
 
+#login-buttons .login-button, .accounts-dialog .login-button{
+  background: none ;
+  margin-left: 0px;
+  height: 80px;
+  padding: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $seafoam;
+  color: $seafoam;
+  text-decoration: none;
+  border-radius: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 1.3em;
+  flex-grow: 1;
+  margin-right: 20px;
+  &:hover{
+    background: none;
+  }
+}
+#login-buttons .login-image{
+  display:none;
+}
+#login-buttons .text-besides-image{
+  margin-left: 0px;
+}
+#login-buttons .login-buttons-with-only-one-button .login-button{
+  display: inline;
+}
+#login-buttons{
+  margin-top: -2%;
+  margin-left: -10px;
 }

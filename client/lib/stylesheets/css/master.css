@@ -9,10 +9,17 @@
   border-top: none;
   border-right: none;
   border-left: none;
-  display: flex; }
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: stretch; }
+
+.m-toolbar span {
+  position: relative;
+  top: 35%;
+  margin: 0px; }
 
 .c-menu-button {
-  position: flex;
   border-width: 5px;
   border-style: solid;
   border-color: #e5ffda;
@@ -20,7 +27,47 @@
   height: 80px;
   padding: 10px;
   text-decoration: none;
-  color: #e5ffda; }
+  margin-right: 10px;
+  color: #e5ffda;
+  font-size: 1.3em;
+  align-items: center; }
+  .c-menu-button:hover, .c-menu-button:focus {
+    transition: all 0.3s ease-in;
+    background-color: #73736f;
+    color: #e5ffda;
+    border-color: #73736f; }
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background: none;
+  margin-left: 0px;
+  height: 80px;
+  padding: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #e5ffda;
+  color: #e5ffda;
+  text-decoration: none;
+  border-radius: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 1.3em;
+  flex-grow: 1;
+  margin-right: 20px; }
+  #login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+    background: none; }
+
+#login-buttons .login-image {
+  display: none; }
+
+#login-buttons .text-besides-image {
+  margin-left: 0px; }
+
+#login-buttons .login-buttons-with-only-one-button .login-button {
+  display: inline; }
+
+#login-buttons {
+  margin-top: -2%;
+  margin-left: -10px; }
 
 body {
   margin: 0px;
