@@ -41,26 +41,25 @@
     border-color: $accentGrey;
   }
 }
+.clicked{
+  transition: all 0.3s ease-in;
+  background-color: $accentGrey;
+  color: $seafoam;
+  border-color: $accentGrey;
+}
+
+
 
 #login-buttons .login-button, .accounts-dialog .login-button{
+  @extend .c-menu-button;
   background: none ;
   margin-left: 0px;
-  height: 80px;
   padding: 10px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: $seafoam;
-  color: $seafoam;
-  text-decoration: none;
   border-radius: 0px;
   font-family: Montserrat;
   font-style: normal;
-  font-size: 1.3em;
-  flex-grow: 1;
   margin-right: 20px;
-  &:hover{
-    background: none;
-  }
+
 }
 #login-buttons .login-image{
   display:none;
@@ -72,6 +71,10 @@
   display: inline;
 }
 #login-buttons{
-  margin-top: -2%;
-  margin-left: -10px;
+  margin-top: -2.6px;
+  padding-left: 0px;
+}
+#login-buttons .login-display-name{
+  margin-right: 0px;
+  margin: 0px;
 }

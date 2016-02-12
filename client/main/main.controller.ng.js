@@ -82,4 +82,5 @@ function MixList($scope,$meteor,$location,$reactive){
   $scope.rappers = 'Kanye West'
 
 
+
 }
