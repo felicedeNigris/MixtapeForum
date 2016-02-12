@@ -20,6 +20,7 @@
   margin: 0px; }
 
 .c-menu-button, #login-buttons .login-button, .accounts-dialog .login-button {
+  transition: all 0.4s ease-out;
   border-width: 5px;
   border-style: solid;
   border-color: #e5ffda;
