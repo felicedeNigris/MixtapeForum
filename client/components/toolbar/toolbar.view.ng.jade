@@ -1,13 +1,14 @@
 .m-toolbar
   span
-    login-buttons
+    login-buttons(ng-click='reload()')
   span
     a(href='/' class='c-menu-button') Home
   span
     a(href='/mixes' class='c-menu-button') Mixes
-  span
+  span(ng-hide="In()")
     a(href='/create' class='c-menu-button') Create a Mix
-  span
+  span(ng-hide="In()")
     a(href='/mymixes' class='c-menu-button') My Mixes
+  
 
     

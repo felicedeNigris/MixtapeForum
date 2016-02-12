@@ -9,9 +9,6 @@ Tracks.allow({
     track.authorname = Meteor.user().profile.display_name //Kelly Roche
     track.authorid = Meteor.user().profile.id  //felideni
     return userId //if signedIn you can post
-    //Meteor.user().emails[0].address     felideni@gmail.com
-    //Meteor.user().profile.id           felideni
-    //Meteor.user().profile.display_name    Kelly Roche
   },
   update: function(userId, track, fields, modifier) {
     track.createdAt = new Date()

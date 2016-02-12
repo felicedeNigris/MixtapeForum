@@ -55,16 +55,6 @@ function MixList($scope,$meteor,$location,$reactive){
   $scope.yesDelete = function(track){
       $scope.tracks.remove({_id: track._id})
   }
-  $scope.getElvis = function(){
-    Meteor.call('getElvis',function(err,data){
-      if(err){
-        console.log('failed ', err)
-      }
-      else{
-        console.log('success ', data)
-      }
-    })
-  }
 
   $scope.getUserPlaylists = function(){
     Meteor.call('getUserPlaylists',(err,data)=>{
@@ -78,9 +68,5 @@ function MixList($scope,$meteor,$location,$reactive){
     })
      Session.set("playlists", data.body);
   }
-
-  $scope.rappers = 'Kanye West'
-
-
 
 }
