@@ -1,3 +1,4 @@
+
 ServiceConfiguration.configurations.update(
   { "service": "spotify" },
   {
