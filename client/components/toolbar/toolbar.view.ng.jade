@@ -1,7 +1,5 @@
 .m-toolbar
   span
-    login-buttons
-  span
     a(href='/' class='c-menu-button') Home
   span
     a(href='/mixes' class='c-menu-button') Mixes
@@ -9,6 +7,8 @@
     a(href='/create' class='c-menu-button') Create a Mix
   span(ng-show="$root.currentUser")
     a(href='/mymixes' class='c-menu-button') My Mixes
+  span
+    login-buttons
   
 
   //- {{$root.currentUser}}
