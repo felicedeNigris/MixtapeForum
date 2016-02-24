@@ -1,20 +1,45 @@
 @import 'colors';
 
-
+//mixtape container mixin
 @mixin mixtape-container($fromcolor,$tocolor,$frompercent,$topercent){
-  width: 320px;
-  height: 500px;
+  min-width: 320px;
+  min-height: 500px;
   font-family: Montserrat, sans-serif;
   color: $white;
+  margin-left:20px;
+  margin-bottom: 20px;
   background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
-  .c-mixtape-button{
-    background: none;
-    border-width: 0px;
-    color: $white;
+  .o-track-list{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    top: 240px;
+    .c-mixtape-button{
+      background: none;
+      border-width: 0px;
+      color: $white;
+      outline: none;
+      display: block;
+      font-size: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
+
 }
 
 
 .m-mixtape-container{
   @include mixtape-container($dark-grey, $olive,-40%, 85%);
+}
+
+
+.m-mixespage-container{
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 160px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
