@@ -1,3 +1,5 @@
+@import 'colors';
+
 .pagination {
   list-style-type: none;
   text-align: center;
@@ -18,27 +20,52 @@
 	background-image: url("/intro-top.jpg");
 	background-size: cover; 
 	padding: 100px; 
-	color: white;
+	color: $white;
+	.intro-text {
+		width: 50%;
+	}
+	h1 {
+		font-size: 64px;
+	}
 }
 
 .intro-mid {
 	background-image: url("/intro-mid.jpg");
 	background-size: cover;
-	padding: 100px;  
+	padding: 100px;
+	h2 {
+		font-family: 'Cutive', serif;  
+	}
+	.mid-left-intro {
+		width: 33.33%;
+	}
+	.mid-right-intro {
+		float: right;
+		width: 33.33%;	
+	}
 }
 
 .intro-bot {
 	background-image: url("/intro-bot.jpg");
 	background-size: cover;
 	padding: 100px;
-	color: white;  
+	color: $white;
+	h2 {
+		font-family: 'Cutive', serif;  
+	}
+	.bot-left-intro {
+		width: 33.33%;
+	}  
+	.bot-right-intro {
+		float: right;
+	}  
 }
 
 button {
 	display: inline-block;
 	cursor: pointer;
-	background: pink;
-	color: white;
+	background: $pink;
+	color: $white;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 5px 15px;
@@ -50,7 +77,11 @@ button {
 }
 
 footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	// background: green;
-	height: 200px;
+	background: $dark-grey;
+	color: $white;
+	height: 100px;
 }
