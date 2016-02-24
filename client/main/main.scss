@@ -9,3 +9,48 @@
     margin: 0.5rem;
   }
 }
+
+.home-wrapper {
+	
+}
+
+.intro-top {
+	background-image: url("/intro-top.jpg");
+	background-size: cover; 
+	padding: 100px; 
+	color: white;
+}
+
+.intro-mid {
+	background-image: url("/intro-mid.jpg");
+	background-size: cover;
+	padding: 100px;  
+}
+
+.intro-bot {
+	background-image: url("/intro-bot.jpg");
+	background-size: cover;
+	padding: 100px;
+	color: white;  
+}
+
+button {
+	display: inline-block;
+	cursor: pointer;
+	background: pink;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 5px 15px;
+	border: none;
+	border-radius: 2px;
+	&:focus {
+		outline: none;
+	}
+}
+
+footer {
+	text-align: center;
+	// background: green;
+	height: 200px;
+}
