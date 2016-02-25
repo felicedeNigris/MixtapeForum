@@ -9,11 +9,22 @@
   margin-left:20px;
   margin-bottom: 20px;
   background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
+  .o-mixtape-image-container{
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    .c-mixtape-image{
+      width: 110%;
+      height: 110%;
+    }
+  }
   .o-track-list{
     list-style: none;
     display: inline-block;
     position: relative;
     top: 240px;
+    text-align: center;
     .c-mixtape-button{
       background: none;
       border-width: 0px;
