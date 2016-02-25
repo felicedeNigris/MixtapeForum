@@ -23,8 +23,11 @@
     list-style: none;
     display: inline-block;
     position: relative;
-    top: 240px;
+    top: 300px;
     text-align: center;
+    li{
+      margin-bottom: -16px;
+    }
     .c-mixtape-button{
       background: none;
       border-width: 0px;
@@ -40,11 +43,38 @@
 }
 
 
+
+
+
+
+//input field
+.m-search-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 96px;
+  input{
+    width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    min-width: 320px;
+    border-bottom-width: 2px;
+    border-left: none;
+    border-bottom-color: black;
+    border-right: none;
+    border-top: none;
+    line-height: 30px;
+
+  }
+}
+
+
+//mixtape container
 .m-mixtape-container{
   @include mixtape-container($dark-grey, $olive,-40%, 85%);
 }
 
-
+//mixes page mixtape container
 .m-mixespage-container{
   display: flex;
   justify-content: center;
