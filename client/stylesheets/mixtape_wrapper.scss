@@ -1,51 +1,5 @@
 @import 'colors';
-
-//mixtape container mixin
-@mixin mixtape-container($fromcolor,$tocolor,$frompercent,$topercent){
-  min-width: 320px;
-  min-height: 500px;
-  font-family: Montserrat, sans-serif;
-  color: $white;
-  margin-left:20px;
-  margin-bottom: 20px;
-  background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
-  .o-mixtape-image-container{
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    overflow: hidden;
-    .c-mixtape-image{
-      width: 110%;
-      height: 110%;
-    }
-  }
-  .o-track-list{
-    list-style: none;
-    display: inline-block;
-    position: relative;
-    top: 300px;
-    text-align: center;
-    li{
-      margin-bottom: -16px;
-    }
-    .c-mixtape-button{
-      background: none;
-      border-width: 0px;
-      color: $white;
-      outline: none;
-      display: block;
-      font-size: 16px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-}
-
-
-
-
-
+@import './mixins/mixtape_container_mixin.scss';
 
 //input field
 .m-search-container{
@@ -53,10 +7,12 @@
   justify-content: center;
   position: relative;
   top: 96px;
+  margin-right:28px;
+  margin-left:28px;
   input{
     width: 1000px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
     min-width: 320px;
     border-bottom-width: 2px;
     border-left: none;
@@ -64,7 +20,8 @@
     border-right: none;
     border-top: none;
     line-height: 30px;
-
+    font-family: Cutive, serif;
+    font-size: 16px;
   }
 }
 
@@ -84,3 +41,13 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+
+//media queries
+
+
+// @media screen and (min-device-width: 320px){
+//   .m-search-container{
+//     margin-left: 0px;
+//   }
+// }
