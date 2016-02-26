@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 .pagination {
   list-style-type: none;
@@ -12,17 +13,19 @@
   }
 }
 
-.home-wrapper {
-	
+section {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 50px 100px; 
 }
 
 .intro-top {
 	background-image: url("/intro-top.jpg");
-	background-size: cover; 
-	padding: 100px; 
 	color: $white;
 	.intro-text {
 		width: 50%;
+		padding-bottom: 50px;
 	}
 	h1 {
 		font-size: 64px;
@@ -31,34 +34,57 @@
 
 .intro-mid {
 	background-image: url("/intro-mid.jpg");
-	background-size: cover;
-	padding: 100px;
+	overflow: hidden;
+	position: relative;
+	@extend %clearfix;
 	h2 {
-		font-family: 'Cutive', serif;  
+		font-family: 'Cutive', serif; 
+	}
+	.left-triangle {
+		transform: rotate(-140deg);
+		height: 700px;
+		width: 400px;
+		background: rgba(255,255,255,0.5);
+		position: absolute;
+		top: -210px;
+		left: -130px;
+	}
+	.right-triangle {
+		transform: rotate(-140deg);
+		height: 700px;
+		width: 400px;
+		background: rgba(255,255,255,0.5);
+		position: absolute;
+		bottom: -210px;
+		right: -130px;
+
 	}
 	.mid-left-intro {
 		width: 33.33%;
+		padding-bottom: 100px;
 	}
 	.mid-right-intro {
 		float: right;
-		width: 33.33%;	
+		width: 33.33%;
+		padding-top: 100px;	
 	}
+	@include clearfix;
 }
 
 .intro-bot {
 	background-image: url("/intro-bot.jpg");
-	background-size: cover;
-	padding: 100px;
 	color: $white;
 	h2 {
 		font-family: 'Cutive', serif;  
 	}
 	.bot-left-intro {
-		width: 33.33%;
+		float: left;
+		padding-bottom: 100px;
 	}  
 	.bot-right-intro {
 		float: right;
 	}  
+	@include clearfix;
 }
 
 button {
@@ -68,11 +94,14 @@ button {
 	color: $white;
 	text-decoration: none;
 	text-transform: uppercase;
-	padding: 5px 15px;
+	padding: 10px 20px;
 	border: none;
 	border-radius: 2px;
 	&:focus {
 		outline: none;
+	}
+	&:hover {
+		background: darken($pink, 10%);
 	}
 }
 
@@ -84,4 +113,7 @@ footer {
 	background: $dark-grey;
 	color: $white;
 	height: 100px;
+	p {
+		margin: 5px 0;
+	}
 }
