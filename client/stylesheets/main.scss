@@ -18,7 +18,7 @@ section {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 50px 100px; 
+	padding: 50px 100px;
 }
 
 .intro-top {
@@ -39,7 +39,7 @@ section {
 	position: relative;
 	@extend %clearfix;
 	h2 {
-		font-family: 'Cutive', serif; 
+		font-family: 'Cutive', serif;
 	}
 	.left-triangle {
 		transform: rotate(-140deg);
@@ -67,7 +67,7 @@ section {
 	.mid-right-intro {
 		float: right;
 		width: 33.33%;
-		padding-top: 100px;	
+		padding-top: 100px;
 	}
 	@include clearfix;
 }
@@ -76,15 +76,15 @@ section {
 	background-image: url("/intro-bot.jpg");
 	color: $white;
 	h2 {
-		font-family: 'Cutive', serif;  
+		font-family: 'Cutive', serif;
 	}
 	.bot-left-intro {
 		float: left;
 		padding-bottom: 100px;
-	}  
+	}
 	.bot-right-intro {
 		float: right;
-	}  
+	}
 	@include clearfix;
 }
 
