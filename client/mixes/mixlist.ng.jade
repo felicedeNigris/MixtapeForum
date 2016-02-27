@@ -6,13 +6,13 @@ div(class="m-mixespage-container")
       img(src="/Beyonce.png" class="c-mixtape-image")
     ul(ng-click="toggleDelete(track)" style="cursor: pointer" class="o-track-list")
       li
-        p {{'Mixtape name: ' + track.name}}
+        p {{'Mix name: ' + track.name}}
         input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-hide="!EditMix" ng-model="track.name" required)
       li 
         p {{track.playlist}}
         input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-hide="!EditMix"  ng-model="track.playlist" required)
       li 
-        p {{'Created by :'}} {{track.authorname === null ? track.authorid : track.authorname }}
+        p {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
       div(ng-hide="!isOwner(track)")
         button(ng-click="toggleModal()" ng-show="showDelete" class="c-mixtape-button") Delete 
         suremodal(ng-click="toggleModal()")
