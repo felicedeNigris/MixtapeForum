@@ -1,5 +1,6 @@
 @import 'colors';
-@import 'mixins';
+@import './mixins/mixins.scss';
+// @import '{cedla:mdi}/materialdesignicons.scss';
 
 .pagination {
   list-style-type: none;

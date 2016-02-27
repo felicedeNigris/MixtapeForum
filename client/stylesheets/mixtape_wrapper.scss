@@ -1,2 +1,45 @@
 @import 'colors';
-@import 'mixins';
+@import './mixins/mixtape_container_mixin.scss';
+@import './mixins/mixins.scss';
+
+//input field
+.m-search-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 96px;
+  margin-right:28px;
+  margin-left:28px;
+  input{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 320px;
+    border-bottom-width: 2px;
+    border-left: none;
+    border-bottom-color: black;
+    border-right: none;
+    border-top: none;
+    line-height: 30px;
+    font-family: Cutive, serif;
+    font-size: 16px;
+    outline:none;
+  }
+}
+
+
+//mixtape container
+.m-mixtape-container{
+  @include mixtape-container($dark-grey, $olive,-40%, 85%);
+}
+
+//mixes page mixtape container
+.m-mixespage-container{
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 160px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

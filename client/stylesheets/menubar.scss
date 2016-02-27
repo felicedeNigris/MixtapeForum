@@ -1,5 +1,5 @@
 @import 'colors';
-@import 'mixins';
+@import './mixins/mixins.scss';
 
 .m-toolbar{
   background-color: $dark-grey;
