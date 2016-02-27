@@ -2,13 +2,13 @@ div(ng-repeat="track in tracks")
   //-show content you created only
   ul(ng-hide="!isOwner(track)")
     li
-      p {{'Mixtape name: ' + track.name}}
+      p {{'Mix name: ' + track.name}}
       input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-hide="!EditMix" ng-model="track.name" required)
     li 
       p {{track.playlist}}
       input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-hide="!EditMix"  ng-model="track.playlist" required)
     li 
-      p {{'Created by :'}} {{track.authorname === null ? track.authorid : track.authorname }}
+      p {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
     button(ng-click="toggleModal()") Delete 
     suremodal(ng-click="toggleModal()")
     button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true") Edit this Mix
