@@ -1,1 +1,120 @@
+@import 'colors';
+@import './mixins/mixins.scss';
 // @import '{cedla:mdi}/materialdesignicons.scss';
+
+.pagination {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+}
+
+section {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 50px 100px; 
+}
+
+.intro-top {
+	background-image: url("/intro-top.jpg");
+	color: $white;
+	.intro-text {
+		width: 50%;
+		padding-bottom: 50px;
+	}
+	h1 {
+		font-size: 64px;
+	}
+}
+
+.intro-mid {
+	background-image: url("/intro-mid.jpg");
+	overflow: hidden;
+	position: relative;
+	@extend %clearfix;
+	h2 {
+		font-family: 'Cutive', serif; 
+	}
+	.left-triangle {
+		transform: rotate(-140deg);
+		height: 700px;
+		width: 400px;
+		background: rgba(255,255,255,0.5);
+		position: absolute;
+		top: -210px;
+		left: -130px;
+	}
+	.right-triangle {
+		transform: rotate(-140deg);
+		height: 700px;
+		width: 400px;
+		background: rgba(255,255,255,0.5);
+		position: absolute;
+		bottom: -210px;
+		right: -130px;
+
+	}
+	.mid-left-intro {
+		width: 33.33%;
+		padding-bottom: 100px;
+	}
+	.mid-right-intro {
+		float: right;
+		width: 33.33%;
+		padding-top: 100px;	
+	}
+	@include clearfix;
+}
+
+.intro-bot {
+	background-image: url("/intro-bot.jpg");
+	color: $white;
+	h2 {
+		font-family: 'Cutive', serif;  
+	}
+	.bot-left-intro {
+		float: left;
+		padding-bottom: 100px;
+	}  
+	.bot-right-intro {
+		float: right;
+	}  
+	@include clearfix;
+}
+
+button {
+	display: inline-block;
+	cursor: pointer;
+	background: $pink;
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 2px;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background: darken($pink, 10%);
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: $dark-grey;
+	color: $white;
+	height: 100px;
+	p {
+		margin: 5px 0;
+	}
+}
