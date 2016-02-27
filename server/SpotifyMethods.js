@@ -66,7 +66,7 @@ Meteor.methods({
 
 
 
-let checkTokenRefreshed = function(response, api) {
+var checkTokenRefreshed = function(response, api) {
   if (response.error && response.error.statusCode === 401) {
     response
     return true
