@@ -68,5 +68,6 @@ function MixList($scope,$meteor,$location,$reactive){
     })
      Session.set("playlists", data.body);
   }
+  
 
 }
