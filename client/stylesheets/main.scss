@@ -18,6 +18,8 @@ section {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	overflow: hidden;
+	position: relative;
 	padding: 50px 100px; 
 }
 
@@ -35,40 +37,48 @@ section {
 
 .intro-mid {
 	background-image: url("/intro-mid.jpg");
-	overflow: hidden;
-	position: relative;
 	@extend %clearfix;
 	h2 {
 		font-family: 'Cutive', serif; 
 	}
 	.left-triangle {
-		transform: rotate(-140deg);
-		height: 700px;
-		width: 400px;
+		height: 100%;
+		width: 100%;
 		background: rgba(255,255,255,0.5);
+		position: relative;
+		padding-bottom: 50%;
+		content: '';
 		position: absolute;
-		top: -210px;
-		left: -130px;
+		bottom: 0;
+		left: 0;
+		transform-origin: bottom left;
+		transform: rotate(-40deg);
 	}
 	.right-triangle {
-		transform: rotate(-140deg);
-		height: 700px;
-		width: 400px;
+		height: 100%;
+		width: 100%;
 		background: rgba(255,255,255,0.5);
+		position: relative;
+		padding-bottom: 50%;
+		content: '';
 		position: absolute;
-		bottom: -210px;
-		right: -130px;
-
+		top: 0;
+		right: 0;
+		transform-origin: top right;
+		transform: rotate(-40deg);
 	}
+
 	.mid-left-intro {
-		width: 33.33%;
+		width: 25%;
 		padding-bottom: 100px;
+		position: relative;
 	}
 	.mid-right-intro {
 		text-align: right;
 		float: right;
-		width: 33.33%;
+		width: 25%;
 		padding-top: 100px;	
+		position: relative;
 	}
 	@include clearfix;
 }
@@ -82,14 +92,24 @@ section {
 	.bot-left-intro {
 		float: left;
 		padding-bottom: 100px;
+		width: 33.3%;
 	}  
 	.bot-right-intro {
+		text-align: right;
 		float: right;
+		width: 33.3%;
 	}  
+	img {
+		bottom: -100px;
+		right: 50px;
+		position: absolute;
+	}
 	@include clearfix;
+
 }
 
 button {
+	margin-top: 20px;
 	display: inline-block;
 	cursor: pointer;
 	background: $pink;
@@ -120,12 +140,26 @@ footer {
 	}
 }
 
+//Responsive breaks
 @media(max-width: 960px) {
 	.intro-mid {
 		color: $white;
 		.left-triangle,
 		.right-triangle {
 			display: none;
+		}
+		.mid-left-intro,
+		.mid-right-intro {
+			width: 40%;
+		}
+	}
+}
+
+@media(max-width: 700px) {
+	.intro-bot {
+		img {
+			width: 50%;
+			height: 50%;
 		}
 	}
 }
@@ -135,7 +169,15 @@ footer {
 		.intro-text {
 			width: 100%;
 		}
-
+	}
+	.intro-bot {
+		.bot-left-intro,
+		{
+			width: 100%;
+		}
+		.bot-right-intro  {
+			display: none;
+		}
 	}
 }
 
