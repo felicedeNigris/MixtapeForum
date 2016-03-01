@@ -65,6 +65,7 @@ section {
 		padding-bottom: 100px;
 	}
 	.mid-right-intro {
+		text-align: right;
 		float: right;
 		width: 33.33%;
 		padding-top: 100px;	
@@ -116,5 +117,50 @@ footer {
 	height: 100px;
 	p {
 		margin: 5px 0;
+	}
+}
+
+@media(max-width: 960px) {
+	.intro-mid {
+		color: $white;
+		.left-triangle,
+		.right-triangle {
+			display: none;
+		}
+	}
+}
+
+@media(max-width: 640px) {
+	.intro-top {
+		.intro-text {
+			width: 100%;
+		}
+
+	}
+}
+
+@media(max-width: 450px) {
+	section {
+		padding: 50px;
+	}
+	.intro-top {
+		h1 {
+			font-size: 32px;
+		}
+	}
+	.intro-mid {
+		color: $white;
+		h2 {
+			font-size: 18px;
+		}
+		.mid-left-intro,
+		.mid-right-intro {
+			width: 100%;
+		}
+	}
+	.intro-bot {
+		h2 {
+			font-size: 18px;
+		}
 	}
 }
