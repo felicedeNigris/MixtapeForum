@@ -24,10 +24,7 @@ xinranxiao:spotify-web-api
 urigo:angular-blaze-template
 blaze-html-templates
 angular-with-blaze
-#angular-templates
 pbastowski:angular-babel
 fourseven:scss
-east5th:check-checker
-meteorhacks:npm
-npm-container
 cedla:mdi
+accounts-base
