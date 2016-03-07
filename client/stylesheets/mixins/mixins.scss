@@ -44,8 +44,13 @@
         border: none;
         width: 300px;
         outline: none;
-        line-height: 20px;
-
+        line-height: 32px;
+        position: relative;
+        bottom: 200px;
+        font-size: 24px;
+      }
+      input::selection{
+        background-color: $green;
       }
     }
     .c-mixtape-button {
@@ -61,6 +66,10 @@
     }
     .c-mixtape-button:hover{
       color: $green;
+    }
+    .editmode{
+      position: relative;
+      bottom: 84px;
     }
 
   }
