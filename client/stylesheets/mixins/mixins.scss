@@ -34,14 +34,21 @@
   }
   .o-track-list{
     list-style: none;
-    display: inline-block;
+    display: inline;
     position: relative;
     top: 300px;
     text-align: center;
     li{
       margin-bottom: -16px;
+      input{
+        border: none;
+        width: 300px;
+        outline: none;
+        line-height: 20px;
+
+      }
     }
-    .c-mixtape-button{
+    .c-mixtape-button {
       background: none;
       border-width: 0px;
       color: $white;
@@ -50,7 +57,12 @@
       font-size: 16px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: -20px;
     }
+    .c-mixtape-button:hover{
+      color: $green;
+    }
+
   }
   @media screen and (min-width: 320px){
     margin-left: 0px;
