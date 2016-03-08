@@ -1,3 +1,4 @@
+/* jshint -W033*/
 'use strict';
 
 angular.module('mixtapes')
