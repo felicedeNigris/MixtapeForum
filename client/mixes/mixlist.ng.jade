@@ -4,7 +4,7 @@ div(class="m-mixespage-container")
   div(ng-repeat="track in tracks" class="m-mixtape-container")
     div(class="o-mixtape-image-container")
       //- img(src="/Beyonce.png" class="c-mixtape-image")
-      | <iframe src="https://embed.spotify.com/?uri=spotify:user:felideni:playlist:4fYk0EmhWfNRg9fV0Ja2tQ " view="coverart" frameborder="0" allowtransparency="true" width="320" height="320"></iframe>
+      //- | <iframe src="https://embed.spotify.com/?uri=spotify:user:felideni:playlist:4fYk0EmhWfNRg9fV0Ja2tQ"  frameborder="0" allowtransparency="true" width="320" height="320"></iframe>
     ul(ng-click="toggleDelete(track)" style="cursor: pointer" class="o-track-list")
       li
         p {{'Mix name: ' + track.name}}
@@ -20,6 +20,4 @@ div(class="m-mixespage-container")
         button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true" ng-show="showDelete" class="c-mixtape-button" ng-class="{editmode: EditMix === true}") Edit this Mix
         button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button" ng-class="{editmode: EditMix === true}") Save Edit
       button(ui-sref="thisMix({mixId:track._id})" class="c-mixtape-button" ng-class="{editmode: EditMix === true}") Go to this Mix
-
-
-| <iframe src="https://embed.spotify.com/?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&theme=white&view=coverart" frameborder="0" allowtransparency="true"></iframe>
+| <iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="320" height="320" frameborder="0" allowtransparency="true"></iframe>
