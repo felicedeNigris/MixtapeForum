@@ -19,8 +19,8 @@ tmeasday:publish-counts
 angularutils:pagination
 dotansimha:accounts-ui-angular
 service-configuration
-xinranxiao:accounts-spotify
 xinranxiao:spotify-web-api
+xinranxiao:accounts-spotify
 urigo:angular-blaze-template
 blaze-html-templates
 angular-with-blaze
@@ -28,3 +28,4 @@ pbastowski:angular-babel
 fourseven:scss
 cedla:mdi
 accounts-base
+meteortoys:allthings

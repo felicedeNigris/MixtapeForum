@@ -1,10 +1,10 @@
-
+/* jshint -W033 */
 ServiceConfiguration.configurations.update(
   { "service": "spotify" },
   {
     $set: {
-      "clientId": "d9f4b11f0177491797d38ba4f24c84e7",
-      "secret": "48906acc63a34de0b88d7c440aa6e107"
+      "clientId": "d12a078de127492693230ee1b9a1380e",
+      "secret": "051ec17063a54e4e8cc5056b6b7398b1"
     }
   },
   { upsert: true }
