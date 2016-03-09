@@ -1,13 +1,9 @@
 <template name="playlists">
   Your playlists
   {{# each playlists.items}}
-    <div>
-      <img src="{{images.[0].url}}" style="{width:50px}">
-    </div>
-    <div>
-      {{name}}
-    </div>
-    <!-- <iframe src="{{href}}" width="150" height="80" frameborder="0" allowtransparency="true" ite&view=coverart"></iframe> -->
-    <iframe src="https://embed.spotify.com/?uri=spotify:user:felideni:playlist:4fYk0EmhWfNRg9fV0Ja2tQ" style="display: block; margin: 0 auto; width: 320px; height: 320px" width="320" height="320" frameborder="0" allowtransparency="true"></iframe>
+  <div class="o-playlist-selector">
+    <input id="playlist {{name}}" type="radio" name="mix"/>
+    <label class="pickmix" for="playlist {{name}}" style="background-image: url({{images.[0].url}})"></label>
+  </div>
   {{/each}}
 </template>

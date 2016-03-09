@@ -1,3 +1,4 @@
+/* jshint -W033 */
 Template.playlists.helpers({
   playlists: function(){
     return Session.get('getUserPlaylists')

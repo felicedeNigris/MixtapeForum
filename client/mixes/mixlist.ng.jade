@@ -3,8 +3,6 @@ div(class="m-search-container")
 div(class="m-mixespage-container")
   div(ng-repeat="track in tracks" class="m-mixtape-container")
     div(class="o-mixtape-image-container")
-      //- img(src="/Beyonce.png" class="c-mixtape-image")
-      //- | <iframe src="https://embed.spotify.com/?uri=spotify:user:felideni:playlist:4fYk0EmhWfNRg9fV0Ja2tQ"  frameborder="0" allowtransparency="true" width="320" height="320"></iframe>
     ul(ng-click="toggleDelete(track)" style="cursor: pointer" class="o-track-list")
       li
         p {{'Mix name: ' + track.name}}
