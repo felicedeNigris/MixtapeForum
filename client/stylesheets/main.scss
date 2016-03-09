@@ -18,13 +18,9 @@ section {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-<<<<<<< HEAD
-	padding: 50px 100px;
-=======
 	overflow: hidden;
 	position: relative;
-	padding: 50px 100px; 
->>>>>>> baaba7a3cbad46a56b5c821a58c31129d8e83879
+	padding: 50px 100px;
 }
 
 .intro-top {
@@ -80,14 +76,11 @@ section {
 	.mid-right-intro {
 		text-align: right;
 		float: right;
-<<<<<<< HEAD
 		width: 33.33%;
 		padding-top: 100px;
-=======
 		width: 25%;
-		padding-top: 100px;	
+		padding-top: 100px;
 		position: relative;
->>>>>>> baaba7a3cbad46a56b5c821a58c31129d8e83879
 	}
 	@include clearfix;
 }
@@ -101,24 +94,16 @@ section {
 	.bot-left-intro {
 		float: left;
 		padding-bottom: 100px;
-<<<<<<< HEAD
 	}
-=======
-		width: 33.3%;
-	}  
->>>>>>> baaba7a3cbad46a56b5c821a58c31129d8e83879
 	.bot-right-intro {
 		text-align: right;
 		float: right;
-<<<<<<< HEAD
-=======
 		width: 33.3%;
-	}  
+	}
 	img {
 		bottom: -100px;
 		right: 50px;
 		position: absolute;
->>>>>>> baaba7a3cbad46a56b5c821a58c31129d8e83879
 	}
 	@include clearfix;
 
@@ -155,8 +140,6 @@ footer {
 		margin: 5px 0;
 	}
 }
-<<<<<<< HEAD
-=======
 
 //Responsive breaks
 @media(max-width: 960px) {
@@ -224,4 +207,3 @@ footer {
 		}
 	}
 }
->>>>>>> baaba7a3cbad46a56b5c821a58c31129d8e83879
