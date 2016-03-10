@@ -22,6 +22,7 @@
   margin-left:20px;
   margin-bottom: 20px;
   background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
+
   .o-mixtape-image-container{
     position: absolute;
     width: 320px;
@@ -44,7 +45,7 @@
         border: none;
         width: 300px;
         outline: none;
-        line-height: 32px;
+        line-height: 60px;
         position: relative;
         bottom: 200px;
         font-size: 24px;
@@ -53,6 +54,7 @@
         background-color: $green;
       }
     }
+
     .c-mixtape-button {
       background: none;
       border-width: 0px;
@@ -67,9 +69,15 @@
     .c-mixtape-button:hover{
       color: $green;
     }
-    .editmode{
+    //container div for buttons
+    .c-button-container{
+      height: 121px;
       position: relative;
-      bottom: 84px;
+      top: 6px;
+    }
+    //hide buttons when in edit mode
+    .hideinEdit{
+      display:none;
     }
 
   }
@@ -80,3 +88,8 @@
     margin-left: 20px;
   }
 }
+
+// .movebuttonsup{
+//   position: relative;
+//   bottom: 40px;
+// }
