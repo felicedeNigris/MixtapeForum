@@ -1,9 +1,9 @@
-<template name="playlists">
+<template name="playlists" ng-controller="MixList">
   Your playlists
   {{# each playlists.items}}
   <div class="o-playlist-selector">
-    <input id="playlist {{name}}" type="radio" name="mix"/>
-    <label class="pickmix" for="playlist {{name}}" style="background-image: url({{images.[0].url}})"></label>
+    <input id="playlist {{name}}" type="radio" ng-click="trackdata(newTrack)" name="mix" ng-model="newTrack.spotifydata"  value="{{uri}}"/>
+    <label  class="pickmix" for="playlist {{name}}" style="background-image: url({{images.[0].url}})"></label>
   </div>
   {{/each}}
 </template>
