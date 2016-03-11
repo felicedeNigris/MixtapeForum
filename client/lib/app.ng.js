@@ -1,3 +1,4 @@
+/* jshint -W033 */
 angular.module('mixtapes', [
   'angular-meteor',
   'ui.router',

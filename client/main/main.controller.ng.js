@@ -1,3 +1,4 @@
+/* jshint -W033 */
 'use strict'
 
 angular.module('mixtapes')
@@ -6,6 +7,14 @@ angular.module('mixtapes')
 
 //The list of Mixtapes
 function MixList($scope,$meteor,$location,$reactive){
+
+  //this prints the track uri when you choose a playlist
+  // in the create a mix page
+  $scope.trackdata = function(pickedPlaylist){
+    var track = pickedPlaylist.spotifydata
+    console.log(track)
+    return track
+  }
 
   //list of tracks in mongo database
   $scope.tracks = $meteor.collection(function(){
@@ -16,7 +25,7 @@ function MixList($scope,$meteor,$location,$reactive){
     //create a mixtape
       $scope.tracks.push({
       name: newTrack.name,
-      playlist: newTrack.playlist,
+      playlist: newTrack.spotifydata, //spotify data
       authorid: newTrack.authorid, //spotify id
       authorname: newTrack.authorname //spotify display name
 
@@ -57,7 +66,7 @@ function MixList($scope,$meteor,$location,$reactive){
   }
 
   $scope.getUserPlaylists = function(){
-    Meteor.call('getUserPlaylists',(err,data)=>{
+    Meteor.call('getUserPlaylists',function(err,data){
       if(err){
         console.log('playlist retrieval failed ',err)
       }
@@ -68,5 +77,6 @@ function MixList($scope,$meteor,$location,$reactive){
     })
      Session.set("playlists", data.body);
   }
+
 
 }

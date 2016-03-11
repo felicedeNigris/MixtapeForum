@@ -6,32 +6,5 @@
   <toolbar></toolbar>
 
   <div ui-view=""></div>
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $('.m-toolbar :nth-child(3) .c-menu-button').on('click',function(){
-        $(this).addClass('clicked')
-        $('.m-toolbar :nth-child(2) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(4) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(5) .c-menu-button').removeClass('clicked')
-    })
-    $('.m-toolbar :nth-child(4) .c-menu-button').on('click',function(){
-        $(this).addClass('clicked')
-        $('.m-toolbar :nth-child(2) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(3) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(5) .c-menu-button').removeClass('clicked')
-    })
-    $('.m-toolbar :nth-child(2) .c-menu-button').on('click',function(){
-        $(this).addClass('clicked')
-        $('.m-toolbar :nth-child(3) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(4) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(5) .c-menu-button').removeClass('clicked')
-    })
-    $('.m-toolbar :nth-child(5) .c-menu-button').on('click',function(){
-        $(this).addClass('clicked')
-        $('.m-toolbar :nth-child(2) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(4) .c-menu-button').removeClass('clicked')
-        $('.m-toolbar :nth-child(3) .c-menu-button').removeClass('clicked')
-    })
-  })//end on ready
-  </script>
+  
 </body>

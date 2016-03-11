@@ -3,19 +3,16 @@ div(class="m-search-container")
 div(class="m-mixespage-container")
   div(ng-repeat="track in tracks" class="m-mixtape-container")
     div(class="o-mixtape-image-container")
-      img(src="/Beyonce.png" class="c-mixtape-image")
     ul(ng-click="toggleDelete(track)" style="cursor: pointer" class="o-track-list")
       li
-        p {{'Mix name: ' + track.name}}
+        p(ng-class="{hideinEdit: EditMix === true}") {{'Mix name: ' + track.name}}
         input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-hide="!EditMix" ng-model="track.name" required)
       li 
-        p {{track.playlist}}
-        input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-hide="!EditMix"  ng-model="track.playlist" required)
-      li 
-        p {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
-      div(ng-hide="!isOwner(track)")
-        button(ng-click="toggleModal()" ng-show="showDelete" class="c-mixtape-button") Delete 
+        p(ng-class="{hideinEdit: EditMix === true}") {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
+      div(ng-hide="!isOwner(track)" class="c-button-container" ng-class="{movebuttonsup: EditMix === true}")
+        button(ng-click="toggleModal()" ng-show="showDelete" class="c-mixtape-button" ng-class="{editmode: EditMix === true}") Delete 
         suremodal(ng-click="toggleModal()")
-        button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true" ng-show="showDelete" class="c-mixtape-button") Edit this Mix
-        button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button") Save Edit
-      button(ui-sref="thisMix({mixId:track._id})" class="c-mixtape-button") Go to this Mix
+        button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true" ng-show="showDelete" class="c-mixtape-button" ng-class="{editmode: EditMix === true}") Edit this Mix
+        button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button" ng-class="{editmode: EditMix === true}") Save Edit
+        button(ui-sref="thisMix({mixId:track._id})" class="c-mixtape-button" ng-class="{hideinEdit: EditMix === true}") Go to this Mix
+//- | <iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="320" height="320" frameborder="0" allowtransparency="true"></iframe>

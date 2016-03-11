@@ -1,34 +1,18 @@
+/* jshint -W033 */
 Meteor.methods({
-
-
-
-
-  // createPlaylist: function(selectedTracks, playlistName){
-  //   if (!selectedTracks || !playlistName || selectedTracks.length > 20) throw new Error("No tracks or playlist name specified");
-  //
-  //   let spotifyApi = new SpotifyWebApi()
-  //
-  //   let createResponse = spotifyApi.createPlaylist(Meteor.user().profile.id, playlistName, {public: true})
-  //
-  //   // Put songs into the playlist.
-  //   let uris = selectedTracks.map(function(track) {
-  //    return track.uri
-  //   })
-
-
-
-  // },//endCreatePlaylist
-
-
 
 
 
   // Get a user's playlists
   getUserPlaylists: function() {
     //Spotify call
-    let spotifyApi = new SpotifyWebApi()
+    var spotifyApi = new SpotifyWebApi({
+      clientId : 'd12a078de127492693230ee1b9a1380e',
+      clientSecret : '051ec17063a54e4e8cc5056b6b7398b1',
+      redirectUri : 'http://localhost:3000/_oauth/spotify?close'
+    })
     //response object
-    let userplaylists = spotifyApi.getUserPlaylists(Meteor.user().profile.id,function(err,data){
+    var userplaylists = spotifyApi.getUserPlaylists(Meteor.user().profile.id,function(err,data){
       if(err){
         console.log("Retrieval error ", err)
       }
@@ -50,15 +34,6 @@ Meteor.methods({
 
     return userplaylists
 
-    // let userplaylists = spotifyApi.getUserPlaylists(Meteor.user().profile.id,function(err,data){
-    //   if(err){
-    //     console.log("Retrieval error ", err)
-    //   }
-    //   else{
-    //     console.log("Success, your playlist ", data.body)
-    //   }
-    // })
-    // return userplaylists
   }//end getUserPlaylists
 
 
@@ -66,9 +41,9 @@ Meteor.methods({
 
 
 
-let checkTokenRefreshed = function(response, api) {
+var checkTokenRefreshed = function(response, api) {
   if (response.error && response.error.statusCode === 401) {
-    response
+    api.refreshAndUpdateAccessToken();
     return true
   } else {
     return false

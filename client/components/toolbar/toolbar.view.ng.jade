@@ -1,12 +1,12 @@
 .m-toolbar
   span
-    a(href='/' class='c-menu-button') Home
+    a(href='/' class='c-menu-button' ng-class="{clicked: activePath('/')}") Home
   span
-    a(href='/mixes' class='c-menu-button') Mixes
+    a(href='/mixes' class='c-menu-button' ng-class="{clicked: activePath('/mixes')}") Mixes
   span(ng-show="$root.currentUser")
-    a(href='/create' class='c-menu-button') Create a Mix
+    a(href='/create' class='c-menu-button' ng-class="{clicked: activePath('/create')}") Create a Mix
   span(ng-show="$root.currentUser")
-    a(href='/mymixes' class='c-menu-button') My Mixes
+    a(href='/mymixes' class='c-menu-button' ng-class="{clicked: activePath('/mymixes')}") My Mixes
   span
     login-buttons
   

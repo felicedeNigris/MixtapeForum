@@ -10,3 +10,86 @@
         clear: both;
     }
 }
+
+
+
+//mixtape container mixin
+@mixin mixtape-container($fromcolor,$tocolor,$frompercent,$topercent){
+  min-width: 320px;
+  min-height: 500px;
+  font-family: Montserrat, sans-serif;
+  color: $white;
+  margin-left:20px;
+  margin-bottom: 20px;
+  background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
+
+  .o-mixtape-image-container{
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    .c-mixtape-image{
+      width: 110%;
+      height: 110%;
+    }
+  }
+  .o-track-list{
+    list-style: none;
+    display: inline;
+    position: relative;
+    top: 300px;
+    text-align: center;
+    li{
+      margin-bottom: -16px;
+      input{
+        border: none;
+        width: 300px;
+        outline: none;
+        line-height: 60px;
+        position: relative;
+        bottom: 200px;
+        font-size: 24px;
+      }
+      input::selection{
+        background-color: $green;
+      }
+    }
+
+    .c-mixtape-button {
+      background: none;
+      border-width: 0px;
+      color: $white;
+      outline: none;
+      display: block;
+      font-size: 16px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -42px;
+    }
+    .c-mixtape-button:hover{
+      color: $green;
+    }
+    //container div for buttons
+    .c-button-container{
+      height: 121px;
+      position: relative;
+      top: 6px;
+    }
+    //hide buttons when in edit mode
+    .hideinEdit{
+      display:none;
+    }
+
+  }
+  @media screen and (min-width: 320px){
+    margin-left: 0px;
+  }
+  @media screen and (min-width: 870px){
+    margin-left: 20px;
+  }
+}
+
+// .movebuttonsup{
+//   position: relative;
+//   bottom: 40px;
+// }

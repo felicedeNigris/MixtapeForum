@@ -1,15 +1,8 @@
 br
 div(class="mix-container") 
-  
   form
     label Title your mix
     input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-model="newTrack.name")
     label Link to your Mix
-    input(type="text" id="mixplaylist" placeholder="Link to your spotify playlist" ng-model="newTrack.playlist")
+    | <blaze-template name="playlists"></blaze-template>
     button(type="button" id="mixplaylist" ng-click="createMixTape(newTrack)") Upload a playlist
-    
-  //- button(type="button" ng-click="getUserPlaylists()") Get Playlists
-  br
-  br
-  
-  | <blaze-template name="playlists"></blaze-template>

@@ -1,5 +1,4 @@
 @import 'colors';
-@import './mixins/mixtape_container_mixin.scss';
 @import './mixins/mixins.scss';
 
 //input field
@@ -35,6 +34,7 @@
 
 //mixes page mixtape container
 .m-mixespage-container{
+  width: 320px;
   display: flex;
   justify-content: center;
   margin-left: 100px;
@@ -42,4 +42,5 @@
   margin-top: 160px;
   flex-direction: row;
   flex-wrap: wrap;
+  word-break: break-word;
 }

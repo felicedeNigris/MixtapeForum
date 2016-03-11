@@ -11,11 +11,21 @@ angular.module('mixtapes')
   }
 })
 
-function menucontroller($scope){
+function menucontroller($scope,$location){
 
   $scope.signedIn = Meteor.userId()
 
   $scope.reload = function(){
     $scope.getReactively('signedIn')
   }
+  $scope.activePath = function(route){
+    //console.log($location.path())
+    if($location.path() === route){
+      return true
+    }else {
+      return false
+    }
+  }
+
+
 }
