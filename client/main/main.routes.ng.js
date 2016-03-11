@@ -1,3 +1,4 @@
+/* jshint -W033 */
 'use strict'
 
 angular.module('mixtapes')
@@ -7,7 +8,7 @@ angular.module('mixtapes')
       .state('main', {
         url: '/',
         templateUrl: 'client/main/main.view.html',
-        controller: 'MixList'
+        controller: 'sayHi'
       })
       .state('mixes',{
         url:'/mixes',
