@@ -27,7 +27,8 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
       name: newTrack.name,
       playlist: "https://embed.spotify.com/?uri=".concat(newTrack.spotifydata), //spotify data
       authorid: newTrack.authorid, //spotify id
-      authorname: newTrack.authorname //spotify display name
+      authorname: newTrack.authorname  //spotify display name
+      // image: newTrack.image //spotify album
     })
     $scope.newTrack = {}
     $location.path('/mymixes')
@@ -59,7 +60,7 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
 
   $scope.modalShow = false //access modal from delete button
 
-  $scope.toggleModal = function(){
+  $scope.toggleModal = function(track){
     $scope.modalShow = !$scope.modalShow
   }
 

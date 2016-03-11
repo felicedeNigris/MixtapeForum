@@ -15,24 +15,14 @@
 
 //mixtape container mixin
 @mixin mixtape-container($fromcolor,$tocolor,$frompercent,$topercent){
-  min-width: 320px;
-  min-height: 500px;
+  width: 320px;
+  height: 500px;
   font-family: Montserrat, sans-serif;
   color: $white;
   margin-left:20px;
   margin-bottom: 20px;
   background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
 
-  .o-mixtape-image-container{
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    overflow: hidden;
-    .c-mixtape-image{
-      width: 110%;
-      height: 110%;
-    }
-  }
   .o-track-list{
     list-style: none;
     display: inline;
@@ -47,7 +37,7 @@
         outline: none;
         line-height: 60px;
         position: relative;
-        bottom: 200px;
+        bottom: 214px;
         font-size: 24px;
       }
       input::selection{
@@ -73,7 +63,7 @@
     .c-button-container{
       height: 121px;
       position: relative;
-      top: 6px;
+      top: -214px;
     }
     //hide buttons when in edit mode
     .hideinEdit{

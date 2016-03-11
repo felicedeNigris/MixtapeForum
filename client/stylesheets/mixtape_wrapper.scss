@@ -34,7 +34,6 @@
 
 //mixes page mixtape container
 .m-mixespage-container{
-  width: 320px;
   display: flex;
   justify-content: center;
   margin-left: 100px;
@@ -43,4 +42,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   word-break: break-word;
+}
+
+li{ //shift the title and created by up
+  position: relative;
+  bottom: 200px;
 }
