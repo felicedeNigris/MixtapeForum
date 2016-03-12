@@ -25,7 +25,8 @@ input[type=radio]{
   background-size:contain;
   background-repeat:no-repeat;
   display:inline-block;
-  width:100px;height:70px;
+  width:100px;
+  height:100px;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
@@ -59,4 +60,17 @@ input[type=radio]{
       background-color: $green;
     }
   }
+}
+
+.o-album-scroll{
+  width: 800px;
+  height: 200px;
+  display: block;
+  overflow: scroll;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0px 3px 10px rgb(74,74,74);
+  top: 90px;
+  background-image: linear-gradient(0deg, $dark-grey -50%, $olive 50%);
 }

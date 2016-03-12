@@ -82,6 +82,7 @@
 
 // Create A Mix Container
 @mixin create-container($fromcolor,$tocolor,$frompercent,$topercent){
+
   height: 500px;
   max-width: 1000px;
   font-family: Montserrat, sans-serif;
@@ -103,17 +104,33 @@
     font-size: 30px;
     line-height: 12px;
     position: relative;
-    top: 319px;
+    top: 120px;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
   label{
     display: block;
-    top: 80px;
     position: relative;
     text-align: center;
     font-size: 16px;
+  }
+  [placeholder="Name your Mix"] + label {
+    top: 80px;
+    margin-bottom: 0px;
+  }
+  label,.o-pickmix-name{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: -17px;
+  }
+  .o-pickmix-name{
+    transform: translateY(-57px);
+    text-overflow: clip;
+    width: 400px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
