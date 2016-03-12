@@ -1,3 +1,6 @@
+@import 'colors';
+@import './mixins/mixins.scss';
+
 .o-playlist-selector{
   display: inline;
   width: 200px;
@@ -34,4 +37,26 @@ input[type=radio]{
   -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
   -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
   filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+//create form container
+.m-create-mix-container{
+  @include create-container($dark-grey, $olive, 0%, 115%);
+  input[type="text"]{
+    border: none;
+    width: 800px;
+    outline: none;
+    line-height: 40px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 67px;
+    display: block;
+    font-size: 24px;
+    font-family: Cutive, sans-serif;
+    &::selection{
+      background-color: $green;
+    }
+  }
 }

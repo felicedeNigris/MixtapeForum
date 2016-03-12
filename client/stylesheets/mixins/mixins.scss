@@ -78,3 +78,42 @@
     margin-left: 20px;
   }
 }
+
+
+// Create A Mix Container
+@mixin create-container($fromcolor,$tocolor,$frompercent,$topercent){
+  height: 500px;
+  max-width: 1000px;
+  font-family: Montserrat, sans-serif;
+  color: $white;
+  margin-left:20px;
+  margin-bottom: 20px;
+  background-image:linear-gradient(315deg,$fromcolor $frompercent,$tocolor $topercent);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  top: 100px;
+  position: relative;
+  .c-create{
+    width: 800px;
+    height: 40px;
+    border-bottom-color: #711582;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    font-size: 30px;
+    line-height: 12px;
+    position: relative;
+    top: 319px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  label{
+    display: block;
+    top: 80px;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+  }
+
+}
