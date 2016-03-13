@@ -1,0 +1,21 @@
+@import 'colors';
+
+
+.m-ok-modal{
+  background-image: linear-gradient(137deg, rgba(79,86,150,.95) 20%, rgba(62,194,172,.95) 173%);
+  position: relative;
+  top: -272px;
+  height: 500px;
+  width: 320px;
+  h3{
+    position: relative;
+    top: 50%;
+    margin: 0px;
+    padding: 0px;
+  }
+  button{
+    position: relative;
+    margin: 0px;
+    top: 350px;
+  }
+}
