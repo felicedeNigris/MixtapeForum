@@ -57,12 +57,25 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
     return track.owner === Meteor.userId()
   }//end isOwner
 
+/**********************************************************
+                      MODAL POP UP
+***********************************************************/
 
-  $scope.modalShow = false //access modal from delete button
+  //turn this scope of modal directive to false
+  this.modalShow = false //access modal from delete button
 
+  // flip the boolean value of modalShow for this scope
   $scope.toggleModal = function(track){
-    $scope.modalShow = !$scope.modalShow
+    this.modalShow = !this.modalShow
+    console.log('toggleModal set this.modalShow to', this.modalShow)
+    setTimeout(modalfalseAgain,100)
+    function modalfalseAgain(){
+      //set modalShow to false again
+      this.modalShow = false
+      console.log('modalfalseAgain says this.modalShow', this.modalShow)
+    }
   }
+
 
   $scope.showDelete = false //show settings for delete button
 
@@ -72,6 +85,20 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
   $scope.yesDelete = function(track){
       $scope.tracks.remove({_id: track._id})
   }
+
+  $scope.show = true
+// hide with scope.show then reset it back to true with timer
+  $scope.hideModal = function(track){
+    $scope.show = false
+    setTimeout(setTrueAgain,500)
+    function setTrueAgain(){
+      $scope.show = true
+    }
+  }
+
+/**********************************************************
+                  END MODAL POP UP
+***********************************************************/
 
   $scope.getUserPlaylists = function(){
     Meteor.call('getUserPlaylists',function(err,data){
@@ -85,6 +112,4 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
     })
      Session.set("playlists", data.body);
   }
-
-
 }

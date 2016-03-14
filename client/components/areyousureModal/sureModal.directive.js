@@ -4,18 +4,13 @@
 angular.module('mixtapes')
 .directive('suremodal', function() {
   return {
-    restrict: 'AE',
-    templateUrl: 'client/components/areyousureModal/sureModal.view.html',
-    replace: true,
-    link: function(scope,element, attrs){
-      scope.show = true
-      scope.hideModal = function(){
-        scope.show = false
-        setTimeout(setTrueAgain,500)
-        function setTrueAgain(){
-          scope.show = true
-        }
-      }
-    }
+    scope:true,
+    template: '<div ng-show="modalShow">' +
+    '<div ng-show="show" ng-if="modalShow === true" class="m-ok-modal">' +
+    '<h3> Are you sure you want to delete this mix ? </h3>' +
+    '<button type="button" ng-click="yesDelete(track)" /> Yes'  +
+    '<button type="button" ng-click="hideModal(track)"/> Cancel' +
+    '</div>' +
+    '</div>'
   }//end return
 })
