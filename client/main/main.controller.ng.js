@@ -62,17 +62,17 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
 ***********************************************************/
 
   //turn this scope of modal directive to false
-  this.modalShow = false //access modal from delete button
+  $scope.modalShow = false //access modal from delete button
 
   // flip the boolean value of modalShow for this scope
-  $scope.toggleModal = function(track){
-    this.modalShow = !this.modalShow
-    console.log('toggleModal set this.modalShow to', this.modalShow)
+  $scope.toggleModal = function(){
+    $scope.modalShow = !$scope.modalShow
+    console.log('toggleModal set this.modalShow to', $scope.modalShow)
     setTimeout(modalfalseAgain,100)
     function modalfalseAgain(){
       //set modalShow to false again
       this.modalShow = false
-      console.log('modalfalseAgain says this.modalShow', this.modalShow)
+      console.log('modalfalseAgain says this.modalShow', $scope.modalShow)
     }
   }
 
