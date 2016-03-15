@@ -17,11 +17,3 @@ angular.module('mixtapes')
     '</div>'
   }//end return
 })
-
-
-
-// '<button ng-init"modalShow = false" ng-click="modalShow = !modalShow"/> Toggle'+ '<div>' +
-// '<h3> modalShow directive is {{modalShow}}</h3>'+ '</div>'
-
-
-// ng-class="{hideinEdit: EditMix === true || showDelete}"

@@ -4,7 +4,8 @@ angular.module('mixtapes', [
   'ui.router',
   'angularUtils.directives.dirPagination',
   'accounts.ui',
-  'angular-blaze-template'
+  'angular-blaze-template',
+  'angularUtils.directives.dirPagination'
 ])
 
 onReady = function() {

@@ -1,0 +1,18 @@
+.pagedir-container{
+  position:absolute;
+  top: 1900px;
+  left: 0px;
+  right: 0px;
+  margin: 0px;
+  .pagination{
+    list-style-type: none;
+    text-align: center;
+    margin:0px;
+    padding: 0px;
+    a{
+      font-family: Cutive, serif;
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

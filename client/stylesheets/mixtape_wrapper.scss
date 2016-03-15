@@ -42,9 +42,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   word-break: break-word;
-}
-
-li{ //shift the title and created by up
-  position: relative;
-  bottom: 200px;
+  li{ //shift the title and created by up
+    position: relative;
+    bottom: 200px;
+  }
 }
