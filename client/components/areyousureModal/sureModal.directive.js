@@ -8,25 +8,20 @@ angular.module('mixtapes')
     scope: {
       remove:'&'
     },
-    template: '<button ng-init"modalShow = false" ng-click="modalShow = !modalShow"/> Delete'+ '<div>' +
+    template: '<button ng-init"modalShow = false" ng-click="modalShow = !modalShow" class="c-mixtape-button"> Delete</button>'+ '<div>' +
     '<div ng-show="modalShow" class="m-ok-modal">' +
     '<h3> Are you sure you want to delete this mix ? </h3>' +
-    '<button type="button" ng-click="remove(track)" /> Yes'  +
-    '<button type="button" ng-click="modalShow = !modalShow"/> Cancel' +
+    '<button type="button" ng-click="remove(track)"> Yes </button>'  +
+    '<button type="button" ng-click="modalShow = !modalShow"> Cancel </button>' +
     '</div>' +
     '</div>'
   }//end return
 })
 
-//
-// '<div ng-show="modalShow">' +
-// '<div ng-show="show" ng-if="modalShow === true" class="m-ok-modal">' +
-// '<h3> Are you sure you want to delete this mix ? </h3>' +
-// '<button type="button" ng-click="yesDelete(track)" /> Yes'  +
-// '<button type="button" ng-click="hideModal(track)"/> Cancel' +
-// '</div>' +
-// '</div>'
 
 
 // '<button ng-init"modalShow = false" ng-click="modalShow = !modalShow"/> Toggle'+ '<div>' +
 // '<h3> modalShow directive is {{modalShow}}</h3>'+ '</div>'
+
+
+// ng-class="{hideinEdit: EditMix === true || showDelete}"
