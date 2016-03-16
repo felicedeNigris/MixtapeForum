@@ -20,15 +20,22 @@ section {
 	background-position: center;
 	overflow: hidden;
 	position: relative;
-	padding: 50px 100px;
+	padding: 50px 100px; 
 }
 
 .intro-top {
 	background-image: url("/intro-top.jpg");
 	color: $white;
 	.intro-text {
+		opacity: 0;
 		width: 50%;
 		padding-bottom: 50px;
+		transform: translateX(30px);
+    	transition: all 0.4s ease-in-out;
+    	&.is-showing {
+    		opacity: 1;
+      		transform: translateX(0px);
+    	}
 	}
 	h1 {
 		font-size: 64px;
@@ -39,7 +46,7 @@ section {
 	background-image: url("/intro-mid.jpg");
 	@extend %clearfix;
 	h2 {
-		font-family: 'Cutive', serif;
+		font-family: 'Cutive', serif; 
 	}
 	.left-triangle {
 		height: 100%;
@@ -69,39 +76,67 @@ section {
 	}
 
 	.mid-left-intro {
+		opacity: 0;
 		width: 25%;
 		padding-bottom: 100px;
 		position: relative;
+		transform: translateX(30px);
+    	transition: all 0.4s ease-in-out;
+		&.is-showing {
+			opacity: 1;
+			transform: translateX(0px);
+		}
 	}
 	.mid-right-intro {
+		opacity: 0;
 		text-align: right;
 		float: right;
-		width: 33.33%;
-		padding-top: 100px;
 		width: 25%;
-		padding-top: 100px;
+		padding-top: 100px;	
 		position: relative;
+		transform: translateX(30px);
+    	transition: all 0.4s ease-in-out;
+		&.is-showing {
+			opacity: 1;
+			transform: translateX(0px);
+		}
 	}
 	@include clearfix;
 }
 
 .intro-bot {
 	background-image: url("/intro-bot.jpg");
+	background-attachment: fixed;
 	color: $white;
 	h2 {
-		font-family: 'Cutive', serif;
+		font-family: 'Cutive', serif;  
 	}
 	.bot-left-intro {
+		opacity: 0;
 		float: left;
 		padding-bottom: 100px;
-	}
+		width: 33.3%;
+		transform: translateX(30px);
+    	transition: all 0.4s ease-in-out;
+		&.is-showing {
+    		opacity: 1;
+      		transform: translateX(0px);
+    	}
+	}  
 	.bot-right-intro {
+		opacity: 0;
 		text-align: right;
 		float: right;
 		width: 33.3%;
-	}
-	img {
-		bottom: -100px;
+		transform: translateX(30px);
+    	transition: all 0.4s ease-in-out;
+		&.is-showing {
+    		opacity: 1;
+      		transform: translateX(0px);
+    	}
+	}  
+	.spotify-logo {
+		bottom: -300px;
 		right: 50px;
 		position: absolute;
 	}
@@ -110,6 +145,7 @@ section {
 }
 
 button {
+	opacity: 0;
 	margin-top: 20px;
 	display: inline-block;
 	cursor: pointer;
@@ -120,12 +156,19 @@ button {
 	padding: 10px 20px;
 	border: none;
 	border-radius: 2px;
+	transform: scaleX (0.8) translateY(10px);
+    transition: all 0.4s ease-in-out;
 	&:focus {
 		outline: none;
 	}
 	&:hover {
 		background: darken($pink, 10%);
 	}
+	&.is-showing {
+		opacity: 1;
+  		transform: scaleX (0) translateY(0px);
+	}
+
 }
 
 footer {
@@ -158,7 +201,7 @@ footer {
 
 @media(max-width: 700px) {
 	.intro-bot {
-		img {
+		.spotify-logo {
 			width: 50%;
 			height: 50%;
 		}
@@ -169,6 +212,12 @@ footer {
 	.intro-top {
 		.intro-text {
 			width: 100%;
+		}
+	}
+	.intro-mid {
+		.mid-left-intro,
+		.mid-right-intro {
+			width: 70%;
 		}
 	}
 	.intro-bot {

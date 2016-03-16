@@ -8,7 +8,7 @@ angular.module('mixtapes')
       .state('main', {
         url: '/',
         templateUrl: 'client/main/main.view.html',
-        controller: 'sayHi'
+        controller: 'MainCtrl'
       })
       .state('mixes',{
         url:'/mixes',
