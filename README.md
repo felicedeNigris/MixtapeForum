@@ -1,6 +1,5 @@
 # Mixtapes App
 ![MixesPage][Preview]
-![MixesPage](https://github.com/felicedeNigris/MixtapeForum/blob/master/public/app_preview_compressed.gif)
 #### A social forum platform for people who want to share their spotify mixtape.
 ---
   - Users sign in with your Spotify account
