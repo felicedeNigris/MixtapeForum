@@ -46,4 +46,45 @@
     position: relative;
     bottom: 200px;
   }
+  .o-rating-container{
+    position: relative;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    bottom: 169px;
+  .mdi{
+    color: $dark-grey;
+    font-size: 32px;
+    }
+  .mdi-thumb-up{
+    position: relative;
+    left: 10px;
+    width: 26%;
+    &:hover{
+      color: $green;
+    }
+  }
+  .mdi-thumb-down{
+    position: relative;
+    right: 10px;
+    width: 26%;
+    &:hover{
+      color: $pink;
+    }
+  }
+  .votes-down{
+    opacity: .7;
+    display: inline;
+    right: 100px;
+    position: relative;
+    color: #802846;
+  }
+  .votes-up{
+    opacity: .7;
+    display: inline;
+    left: -10px;
+    position: relative;
+    color: #97AB5C;
+  }
+  }
 }

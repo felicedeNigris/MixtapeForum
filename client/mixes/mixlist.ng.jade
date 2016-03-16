@@ -15,5 +15,13 @@ div(class="m-mixespage-container")
         button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button") Save Edit
         button( ui-sref="thisMix({mixId:track._id})" class="c-mixtape-button" ng-class="{hideinEdit: EditMix === true || showDelete}") Go to this Mix
         div(suremodal remove="yesDelete(track)" modal='modalShow')
+      div(class="o-rating-container")
+        i(class="mdi mdi-thumb-down") 
+        span 
+          h4(class="votes-down") 100
+        i(class="mdi mdi-thumb-up") 
+        span 
+          h4(class="votes-up") 100
+          
 div(class="pagedir-container")
   | <dir-pagination-controls></dir-pagination-controls> 
