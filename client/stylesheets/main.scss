@@ -136,7 +136,7 @@ section {
     	}
 	}  
 	.spotify-logo {
-		bottom: -1300px;
+		bottom: -300px;
 		right: 50px;
 		position: absolute;
 	}
@@ -212,6 +212,12 @@ footer {
 	.intro-top {
 		.intro-text {
 			width: 100%;
+		}
+	}
+	.intro-mid {
+		.mid-left-intro,
+		.mid-right-intro {
+			width: 70%;
 		}
 	}
 	.intro-bot {
