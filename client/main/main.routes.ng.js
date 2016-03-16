@@ -14,7 +14,6 @@ angular.module('mixtapes')
         url:'/mixes',
         templateUrl: 'client/mixes/mixlist.html',
         controller: 'MixList',
-        //controllerAs:'vm'
       })
       .state('create',{
         url:'/create',
@@ -34,9 +33,8 @@ angular.module('mixtapes')
       })
       .state('mymixes',{
         url:'/mymixes',
-        templateUrl: 'client/mymixes/mymixtapes.html',
+        templateUrl: 'client/mixes/mymixes/mymixtapes.html',
         controller: 'MixList',
-        //controllerAs:'vm'
       })
       .state('thisMix',{
         url:'/mixes/thismix/:mixId',
