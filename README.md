@@ -1,5 +1,5 @@
 # Mixtapes App
-
+![MixesPage][Preview]
 #### A social forum platform for people who want to share their spotify mixtape.
 ---
   - Users sign in with your Spotify account
@@ -19,7 +19,7 @@
 ### Tech
 
 Dillinger uses a number of open source projects to work properly:
-
+* [Preview]: https://github.com/felicedeNigris/MixtapeForum/blob/master/public/app_preview_compressed.gif
 * [AngularJS] - HTML enhanced for web apps!
 * [meteor-spotify] - A meteor wrapper for Spotify's web API via the wonderful spotify-web-api-node.
 * [meteor-accounts-spotify] - An updated and maintained meteor package for Spotify's login service.
