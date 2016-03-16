@@ -77,10 +77,10 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
   }
 
 
-  $scope.showDelete = false //show settings for delete button
+  this.showDelete = false //show settings for delete button
 
   $scope.toggleDelete = function(track){
-    $scope.showDelete = !$scope.showDelete
+    this.showDelete = !this.showDelete
   }
   $scope.yesDelete = function(track){
       $scope.tracks.remove({_id: track._id})
