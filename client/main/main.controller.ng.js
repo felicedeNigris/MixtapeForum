@@ -27,8 +27,9 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
       name: newTrack.name,
       playlist: "https://embed.spotify.com/?uri=".concat(newTrack.spotifydata), //spotify data
       authorid: newTrack.authorid, //spotify id
-      authorname: newTrack.authorname  //spotify display name
-      // image: newTrack.image //spotify album
+      authorname: newTrack.authorname,  //spotify display name
+      upvote: 0,// votes up count
+      downvote: 0 //votes down
     })
     $scope.newTrack = {}
     $location.path('/mymixes')
@@ -76,7 +77,6 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
     }
   }
 
-
   this.showDelete = false //show settings for delete button
 
   $scope.toggleDelete = function(track){
@@ -100,6 +100,33 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
                   END MODAL POP UP
 ***********************************************************/
 
+
+/*********************************************
+      VOTING FEATURES
+*********************************************/
+
+  $scope.upVoteOnce = true
+
+  $scope.upVote = function(track){
+    if(this.upVoteOnce){
+      var plusOne = track.upvote +=1
+      $scope.tracks.save({_id: track._id , upvote: plusOne})
+    }
+    this.upVoteOnce = false
+  }// end upVote
+
+  $scope.downVoteOnce = true
+
+  $scope.downVote = function(track){
+    if(this.downVoteOnce){
+      var plusOne = track.downvote +=1
+      $scope.tracks.save({_id: track._id , downvote: plusOne})
+    }
+    this.downVoteOnce = false
+  }//end DownVote
+/*********************************************
+        END VOTING FEATURES
+*********************************************/
   $scope.getUserPlaylists = function(){
     Meteor.call('getUserPlaylists',function(err,data){
       if(err){
