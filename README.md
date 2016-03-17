@@ -54,12 +54,9 @@ MIT
 **Let's Hack everyday!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-<<<<<<< HEAD
 
    [PreviewHome]: https://github.com/felicedeNigris/MixtapeForum/blob/master/public/Homepage.gif
-=======
    [PrevieHome]: https://github.com/felicedeNigris/MixtapeForum/blob/master/public/Homepage.gif
->>>>>>> 75c4ec7bace3b43623d0210d2bec7b7914a4bbbf
    [Preview]: https://github.com/felicedeNigris/MixtapeForum/blob/master/public/app_preview_compressed.gif
    [jQuery]: <http://jquery.com>
    [AngularJS]: <http://angularjs.org>
