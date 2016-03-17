@@ -1,5 +1,8 @@
 # Mixtapes App
 ![MixesPage][Preview]
+![MixesPage][Preview]
+
+![MixesHome][PreviewHome]
 #### A social forum platform for people who want to share their spotify mixtape.
 ---
   - Users sign in with your Spotify account
@@ -54,6 +57,7 @@ MIT
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
+   [PreviewHome]: https://github.com/felicedeNigris/MixtapeForum/blob/master/public/Homepage.gif
    [Preview]: https://github.com/felicedeNigris/MixtapeForum/blob/master/public/app_preview_compressed.gif
    [jQuery]: <http://jquery.com>
    [AngularJS]: <http://angularjs.org>
