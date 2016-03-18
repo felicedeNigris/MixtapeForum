@@ -11,7 +11,7 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
   //this prints the track uri when you choose a playlist
   // in the create a mix page
   $scope.trackdata = function(pickedPlaylist){
-    var track = pickedPlaylist.spotifydata
+    var track = pickedPlaylist.spotifydata.playlist
     console.log(track)
     return track
   }
@@ -25,7 +25,8 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
     //create a mixtape
       $scope.tracks.push({
       name: newTrack.name,
-      playlist: "https://embed.spotify.com/?uri=".concat(newTrack.spotifydata), //spotify data
+      playlist: "https://embed.spotify.com/?uri=".concat(newTrack.spotifydata.playlist), //spotify data
+      data: newTrack.spotifydata, //spotify uri and image { object }
       authorid: newTrack.authorid, //spotify id
       authorname: newTrack.authorname,  //spotify display name
       upvote: 0,// votes up count
@@ -34,6 +35,7 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
     $scope.newTrack = {}
     $location.path('/mymixes')
   }//end createMixTape
+
 
   //this add trust to a url for iframe
   $scope.trustMixTape = function(track){
