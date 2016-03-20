@@ -31,12 +31,12 @@ function mainCtrl($scope){
 			//Animate  bottom text on scroll
 			if(document.documentElement.scrollTop || botLeft.getBoundingClientRect().top - window.innerHeight < -50) {
 	            botLeft.classList.add('is-showing');
-			  	botRight.classList.add('is-showing'); 
+			  	botRight.classList.add('is-showing');
 	         }
 			if(document.documentElement.scrollTop || btn.getBoundingClientRect().top - window.innerHeight < -50) {
 				btn.classList.add('is-showing');
 			}
-			
+
 			//Move Spotify logo up on scroll
 			if(document.documentElement.scrollTop || bot.getBoundingClientRect().top - window.innerHeight < 0) {
 				if(window.innerWidth > 700) {
