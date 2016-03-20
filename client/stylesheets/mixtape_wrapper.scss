@@ -42,9 +42,30 @@
   flex-direction: row;
   flex-wrap: wrap;
   word-break: break-word;
+  .c-albumcover{
+    margin-bottom: -320px;
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+    top: -15px;
+    width: 320px;
+    height: 320px;
+    // box-shadow: inset 0px 2px 7px $dark-grey;
+
+  }
+  iframe{
+    position:relative;
+    z-index: 2;
+    top: -19px;
+    height:80px;
+    .main{
+      box-shadow: 0px 0px 30px 1px $dark-grey;
+    }
+  }
+
   li{ //shift the title and created by up
     position: relative;
-    bottom: 200px;
+    bottom: 106px;
   }
   .o-rating-container{
     position: relative;

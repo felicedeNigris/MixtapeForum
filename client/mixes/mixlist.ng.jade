@@ -3,14 +3,14 @@ div(class="m-search-container")
 div(class="m-mixespage-container")
   div(dir-paginate="track in tracks | itemsPerPage : 9 | filter: find" class="m-mixtape-container")
     div(class="o-mixtape-image-container")
-    //- image(src="{{track.data.image}}" width="320" height="320")
+    image(src="{{track.data.image}}" class="c-albumcover")
     iframe(ng-src="{{trustMixTape(track)}}" width="320" height="100" frameborder="0" allowtransparency="true")
     ul(ng-click="toggleDelete(track)" style="cursor: pointer" class="o-track-list")
       li
         h3(ng-class="{hideinEdit: EditMix === true}") {{track.name}}
         input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-hide="!EditMix" ng-model="track.name" required)
       li 
-        p(ng-class="{hideinEdit: EditMix === true}") {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
+        //- p(ng-class="{hideinEdit: EditMix === true}") {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
       div(ng-hide="!isOwner(track)" class="c-button-container" ng-class="{movebuttonsup: EditMix === true}")
         button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true || toggleModal" ng-show="showDelete" class="c-mixtape-button") Edit this Mix
         button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button") Save Edit
