@@ -3,7 +3,7 @@ div(class="m-search-container")
 div(class="m-mixespage-container")
   div(dir-paginate="track in tracks | itemsPerPage : 9 | filter: find" class="m-mixtape-container")
     div(class="o-mixtape-image-container")
-    image(src="{{track.data.image}}" width="320" height="320")
+    image(src="{{track.data.image}}" width="320" height="320" class="c-albumcover")
     iframe(ng-src="{{trustMixTape(track)}}" width="320" height="100" frameborder="0" allowtransparency="true")
     ul(ng-click="toggleDelete(track)" style="cursor: pointer" class="o-track-list")
       li
