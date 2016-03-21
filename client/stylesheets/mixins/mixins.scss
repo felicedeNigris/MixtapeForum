@@ -22,7 +22,6 @@
   margin-left:20px;
   margin-bottom: 20px;
   background-image:linear-gradient(45deg,$fromcolor $frompercent,$tocolor $topercent);
-
   .o-track-list{
     list-style: none;
     display: inline;
@@ -38,8 +37,9 @@
         outline: none;
         line-height: 60px;
         position: relative;
-        bottom: 307px;
+        bottom: 378px;
         font-size: 24px;
+        z-index: 5;
       }
       input::selection{
         background-color: $green;
@@ -57,8 +57,9 @@
       margin-right: auto;
       margin-bottom: -42px;
       opacity: 1;
-      top: 107px;
+      top: 163px;
       position: relative;
+
     }
     .c-mixtape-button:hover{
       color: $green;
@@ -68,6 +69,10 @@
       height: 121px;
       position: relative;
       top: -214px;
+      //move items up when in edit mode
+      .shiftup{
+        top: 157px;
+      }
     }
     //hide buttons when in edit mode
     .hideinEdit{

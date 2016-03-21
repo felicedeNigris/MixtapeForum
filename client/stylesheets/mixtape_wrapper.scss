@@ -47,7 +47,7 @@
     position: relative;
     pointer-events: none;
     z-index: 1;
-    top: -15px;
+    top: 65px;
     width: 320px;
     height: 320px;
     // box-shadow: inset 0px 2px 7px $dark-grey;
@@ -62,25 +62,28 @@
       box-shadow: 0px 0px 30px 1px $dark-grey;
     }
   }
-
   li{ //shift the title and created by up
     position: relative;
     bottom: 106px;
+    top: -36px;
   }
+
   .o-rating-container{
     position: relative;
     display: block;
     margin: 0px;
     padding: 0px;
-    bottom: 169px;
+    bottom: 123px;
   .mdi{
     color: $dark-grey;
-    font-size: 32px;
+    font-size: 28px;
+    top: 123px;
     }
   .mdi-thumb-up{
     position: relative;
     left: 10px;
     width: 26%;
+    top: 0px;
     &:hover{
       color: $green;
     }
@@ -89,6 +92,7 @@
     position: relative;
     right: 10px;
     width: 26%;
+    top: 0px;
     &:hover{
       color: $pink;
     }
@@ -107,5 +111,6 @@
     position: relative;
     color: #97AB5C;
   }
-  }
+
+} //end rating container
 }

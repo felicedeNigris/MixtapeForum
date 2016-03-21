@@ -11,12 +11,12 @@ div(class="m-mixespage-container")
         input(type="text" id="mixname" placeholder="Title your Mix Tape" ng-hide="!EditMix" ng-model="track.name" required)
       li 
         //- p(ng-class="{hideinEdit: EditMix === true}") {{'By :'}} {{track.authorname === null ? track.authorid : track.authorname }}
-      div(ng-hide="!isOwner(track)" class="c-button-container" ng-class="{movebuttonsup: EditMix === true}")
-        button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true || toggleModal" ng-show="showDelete" class="c-mixtape-button") Edit this Mix
-        button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button") Save Edit
+      div(ng-hide="!isOwner(track)" class="c-button-container")
+        button(ng-init="EditMix = false" ng-click="EditMix =! false " ng-hide="EditMix === true || toggleModal"  ng-show="showDelete && !EditMix" class="c-mixtape-button") Edit this Mix
+        button(ng-hide="!EditMix" type="submit" ng-submit="editMixTape(track)" ng-click="EditMix = false" class="c-mixtape-button" ng-class="{shiftup: EditMix === true}") Save Edit
         button( ui-sref="thisMix({mixId:track._id})" class="c-mixtape-button" ng-class="{hideinEdit: EditMix === true || showDelete}") Go to this Mix
-        div(suremodal remove="yesDelete(track)" modal='modalShow')
-      div(class="o-rating-container")
+        div(suremodal remove="yesDelete(track)" modal='modalShow' ng-hide="!EditMix")
+      div(class="o-rating-container" ng-class="{hideinEdit: EditMix === true}")
         i(class="mdi mdi-thumb-down" ng-click="downVote(track)" ) 
         span
           h4(class="votes-down") {{track.downvote}}
@@ -24,5 +24,6 @@ div(class="m-mixespage-container")
         span 
           h4(class="votes-up" ) {{track.upvote}}
           
-div(class="pagedir-container")
+div(class="pagedir-container" class="c-mixtape-button" )
   | <dir-pagination-controls></dir-pagination-controls> 
+  
