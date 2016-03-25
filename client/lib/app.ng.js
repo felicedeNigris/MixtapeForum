@@ -7,13 +7,14 @@ angular.module('mixtapes', [
   'angular-blaze-template',
   'angularUtils.directives.dirPagination'
 ])
+angular.bootstrap(document, ['mixtapes'],{strictDi: true}) //strict minification safe
 
-onReady = function() {
-  angular.bootstrap(document, ['mixtapes'])
-}
-
-if(Meteor.isCordova) {
-  angular.element(document).on('deviceready', onReady)
-} else {
-  angular.element(document).ready(onReady)
-}
+// onReady = function() {
+//   angular.bootstrap(document, ['mixtapes'],{strictDi: true}) //strict minification safe
+// }
+//
+// if(Meteor.isCordova) {
+//   angular.element(document).on('deviceready', onReady)
+// } else {
+//   angular.element(document).ready(onReady)
+// }

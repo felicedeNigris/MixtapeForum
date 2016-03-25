@@ -317,6 +317,10 @@
       "path": "packages/angular-meteor-auth.js"
     },
     {
+      "sourceMap": "packages/pbastowski_angular-babel.js.map",
+      "path": "packages/pbastowski_angular-babel.js"
+    },
+    {
       "sourceMap": "packages/standard-minifiers.js.map",
       "path": "packages/standard-minifiers.js"
     },
@@ -354,6 +358,26 @@
     },
     {
       "path": "packages/global-imports.js"
+    },
+    {
+      "sourceMap": "app/server/startup/tracks.js.map",
+      "path": "app/server/startup/tracks.js"
+    },
+    {
+      "sourceMap": "app/model/tracks.js.map",
+      "path": "app/model/tracks.js"
+    },
+    {
+      "sourceMap": "app/server/SpotifyMethods.js.map",
+      "path": "app/server/SpotifyMethods.js"
+    },
+    {
+      "sourceMap": "app/server/spotifyservice.js.map",
+      "path": "app/server/spotifyservice.js"
+    },
+    {
+      "sourceMap": "app/server/users.js.map",
+      "path": "app/server/users.js"
     }
   ]
 }
