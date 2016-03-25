@@ -20,7 +20,7 @@ angular.module('mixtapes')
         templateUrl: "client/create-a-mix/mixtapeform.html",
         controller:'MixList',
         resolve: {
-            currentUser: ($q)=>{
+            currentUser: function($q){
               if(Meteor.userId() === null){
                 //won't allow user to create a post unless logged in
                 return $q.reject('AUTH_REQUIRED')
