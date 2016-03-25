@@ -1,0 +1,170 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "1cc47fdec3ff0d24742fe5053e22ec062cf12a11.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/1cc47fdec3ff0d24742fe5053e22ec062cf12a11.css?meteor_css_resource=true",
+      "size": 135331,
+      "hash": "1cc47fdec3ff0d24742fe5053e22ec062cf12a11"
+    },
+    {
+      "path": "packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.eot",
+      "size": 192888,
+      "hash": "e66a43c2b3635b763897e8a05f900c741e08e83f"
+    },
+    {
+      "path": "packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.svg",
+      "size": 1466944,
+      "hash": "dba5a3ebe8b48a764dbe67b2ad11938c9d9f2707"
+    },
+    {
+      "path": "packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.ttf",
+      "size": 192668,
+      "hash": "a07a623f8933fec2645929581156f818a303baca"
+    },
+    {
+      "path": "packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.woff",
+      "size": 94500,
+      "hash": "f1e27beee870ab3c6ff91f0511529f4dd15e97bf"
+    },
+    {
+      "path": "packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.woff2",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/cedla_mdi/MaterialDesign-WebFont/fonts/materialdesignicons-webfont.woff2",
+      "size": 73656,
+      "hash": "e23ac7f3955a13ebb749a4aa791651bd7bc6a1ce"
+    },
+    {
+      "path": "app/Beyonce.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Beyonce.png",
+      "size": 211587,
+      "hash": "74558acf3de21ab99285d2ba5be2deef8286dc67"
+    },
+    {
+      "path": "app/Homepage.gif",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Homepage.gif",
+      "size": 1871662,
+      "hash": "3af56c149f26119ac4f78e67fe8fbd8e3cba8e09"
+    },
+    {
+      "path": "app/Tame Impala.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Tame Impala.png",
+      "size": 284256,
+      "hash": "ebcd9053bb4079f54109f722fbdcf484c8455e4f"
+    },
+    {
+      "path": "app/Toro y Moi_What for.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/Toro y Moi_What for.png",
+      "size": 308907,
+      "hash": "de48a517a80edc0a582ae3f66218dd391e79a411"
+    },
+    {
+      "path": "app/app_preview_compressed.gif",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/app_preview_compressed.gif",
+      "size": 1842454,
+      "hash": "5458b56aaa1f0f5c06ee751310d73bb95b9e080b"
+    },
+    {
+      "path": "app/favicon.ico",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/favicon.ico",
+      "size": 4286,
+      "hash": "07f43cc26f7dbe54e50e9914f25f9cf6fb01d2a9"
+    },
+    {
+      "path": "app/intro-bot.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/intro-bot.jpg",
+      "size": 22620,
+      "hash": "681414af6f122aba7e792db7e147ae6de7ca7ea0"
+    },
+    {
+      "path": "app/intro-mid.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/intro-mid.jpg",
+      "size": 51369,
+      "hash": "a77bceb899be3f54b84520d5f443de4b8c3f0e17"
+    },
+    {
+      "path": "app/intro-top.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/intro-top.jpg",
+      "size": 69616,
+      "hash": "655a52f7dbe064b7c9e9e2083b218de15c2e74d7"
+    },
+    {
+      "path": "app/mixtapes_screenshot.gif",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/mixtapes_screenshot.gif",
+      "size": 7474351,
+      "hash": "aaa14b8fb8dcefc6047c1af6e8c88353bf34232f"
+    },
+    {
+      "path": "app/spotify-logo.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/spotify-logo.svg",
+      "size": 6270,
+      "hash": "62bdbc8801ba59816e2908498233c2b27a170021"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "e425582fb85679a6c6b955b86308529dd508ef1d"
+    },
+    {
+      "path": "body.html",
+      "where": "internal",
+      "type": "body",
+      "hash": "e02f828f89549f808cc90acd9d46aab6222b2c8e"
+    }
+  ]
+}

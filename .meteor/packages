@@ -10,7 +10,6 @@ mongo                   # The database Meteor supports right now
 session                 # Client-side reactive dictionary for your app
 tracker                 # Meteor's client-side reactive programming library
 
-standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
 angularui:angular-ui-router
@@ -24,9 +23,10 @@ xinranxiao:accounts-spotify
 urigo:angular-blaze-template
 blaze-html-templates
 angular-with-blaze
-pbastowski:angular-babel
 fourseven:scss
 cedla:mdi
 accounts-base
 meteortoys:allthings
 angular-meteor-auth
+standard-minifiers
+ecmascript

@@ -1,0 +1,9 @@
+
+{
+  "galaxy.meteor.com": {
+     "env": {
+       "ROOT_URL": "http://mixtapes.meteorapp.com",
+       "MONGO_URL": "mongodb://mixtapesAdmin:0000@ds023078.mlab.com:23078/mixtapes"
+     }
+   }
+}
