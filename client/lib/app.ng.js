@@ -5,7 +5,8 @@ angular.module('mixtapes', [
   'angularUtils.directives.dirPagination',
   'accounts.ui',
   'angular-blaze-template',
-  'angularUtils.directives.dirPagination'
+  'angularUtils.directives.dirPagination',
+  'angular-meteor.auth'
 ])
 
 onReady = function() {

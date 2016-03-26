@@ -3,12 +3,9 @@
     a(href='/' class='c-menu-button' ng-class="{clicked: activePath('/')}") Home
   span
     a(href='/mixes' class='c-menu-button' ng-class="{clicked: activePath('/mixes')}") Mixes
-  span(ng-show="$root.currentUser")
+  span(ng-show="$auth.currentUser")
     a(href='/create' class='c-menu-button' ng-class="{clicked: activePath('/create')}") Create a Mix
-  span(ng-show="$root.currentUser")
+  span(ng-show="$auth.currentUser")
     a(href='/mymixes' class='c-menu-button' ng-class="{clicked: activePath('/mymixes')}") My Mixes
   span
     login-buttons
-  
-
-  //- {{$root.currentUser}}

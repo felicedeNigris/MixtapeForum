@@ -18,11 +18,12 @@ angular.module('mixtapes')
       .state('create',{
         url:'/create',
         templateUrl: "client/create-a-mix/mixtapeform.html",
-        controller:'MixList',
+        controller:'getSpotify',
         resolve: {
             currentUser: function($q){
               if(Meteor.userId() === null){
                 //won't allow user to create a post unless logged in
+                alert('Authorization Required')
                 return $q.reject('AUTH_REQUIRED')
               }
               else{

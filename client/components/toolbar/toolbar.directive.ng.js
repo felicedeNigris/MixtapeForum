@@ -1,3 +1,4 @@
+/* jshint -W033 */
 'use strict'
 
 angular.module('mixtapes')
@@ -11,13 +12,11 @@ angular.module('mixtapes')
   }
 })
 
-function menucontroller($scope,$location){
+function menucontroller($scope,$location,$auth){
+  // $auth.waitForUser().then(function(){
+  //   alert('You successfully signed in!')
+  // })// end auth.waitForUser
 
-  $scope.signedIn = Meteor.userId()
-
-  $scope.reload = function(){
-    $scope.getReactively('signedIn')
-  }
   $scope.activePath = function(route){
     //console.log($location.path())
     if($location.path() === route){
@@ -26,6 +25,11 @@ function menucontroller($scope,$location){
       return false
     }
   }
-
-
 }
+
+//
+// $scope.signedIn = Meteor.userId()
+//
+// $scope.reload = function(){
+//   $scope.getReactively('signedIn')
+// }
