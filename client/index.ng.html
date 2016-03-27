@@ -4,7 +4,7 @@
 </head>
 <body>
   <toolbar></toolbar>
-  <div id="loggingIn" ng-show="$auth.loggingIn" > Logging In .....</div>
+  <div id="loggingIn" ng-show="$auth.loggingIn && !Meteor.userId()" > Logging In .....</div>
   <!-- <p> {{$auth.loggingIn}} </p> -->
   <div ui-view=""></div>
 </body>
