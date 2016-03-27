@@ -13,9 +13,23 @@ angular.module('mixtapes')
 })
 
 function menucontroller($scope,$location,$auth){
-  // $auth.waitForUser().then(function(){
-  //   alert('You successfully signed in!')
-  // })// end auth.waitForUser
+
+  $scope.$watch('currentUser',function(newVal, oldVal){
+    var options = {
+      showDialog: true, // Whether or not to force the user to approve the app again if they’ve already done so.
+      requestPermissions: ['user-read-email','playlist-modify-private', 'user-library-read','user-follow-read', 'playlist-read-private','streaming'] // Spotify access scopes.
+    };
+    console.log('watch newVal: '+ newVal,'watch oldVal: '+ oldVal)
+    if(newVal !== oldVal){
+      setTimeout(function(){
+        location.reload()
+            Meteor.loginWithSpotify(options,function(err){
+              console.log(err || 'No Error logging in with Spotify')
+            })
+      },1500)
+    }
+    console.log('watch newVal: '+ newVal,'watch oldVal: '+ oldVal)
+  })
 
   $scope.activePath = function(route){
     //console.log($location.path())
@@ -25,11 +39,5 @@ function menucontroller($scope,$location,$auth){
       return false
     }
   }
-}
 
-//
-// $scope.signedIn = Meteor.userId()
-//
-// $scope.reload = function(){
-//   $scope.getReactively('signedIn')
-// }
+}
