@@ -19,8 +19,8 @@ function menucontroller($scope,$location,$auth){
       showDialog: true, // Whether or not to force the user to approve the app again if they’ve already done so.
       requestPermissions: ['user-read-email','playlist-modify-private', 'user-library-read','user-follow-read', 'playlist-read-private','streaming'] // Spotify access scopes.
     };
-    console.log('watch newVal: '+ newVal,'watch oldVal: '+ oldVal)
-    if(newVal !== oldVal){
+    console.log('watch newVal: '+ newVal,' watch oldVal: '+ oldVal)
+    if(typeof newVal !== typeof {} || newVal !== oldVal ){
       setTimeout(function(){
         location.reload()
             Meteor.loginWithSpotify(options,function(err){
@@ -28,7 +28,7 @@ function menucontroller($scope,$location,$auth){
             })
       },1500)
     }
-    console.log('watch newVal: '+ newVal,'watch oldVal: '+ oldVal)
+    console.log('watch newVal: ' + newVal,' watch oldVal: '+ oldVal)
   })
 
   $scope.activePath = function(route){
