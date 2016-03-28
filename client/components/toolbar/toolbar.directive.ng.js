@@ -20,13 +20,21 @@ function menucontroller($scope,$location,$auth){
       requestPermissions: ['user-read-email','playlist-modify-private', 'user-library-read','user-follow-read', 'playlist-read-private','streaming'] // Spotify access scopes.
     };
     console.log('watch newVal: '+ newVal,' watch oldVal: '+ oldVal)
-    if(typeof newVal !== typeof {} || newVal !== oldVal ){
+    //if auth.currentUser isn't an object
+    //reload and login untill it is an object
+    if(typeof newVal !== typeof {} ){ //&& typeof oldVal !== typeof {}
       setTimeout(function(){
         location.reload()
             Meteor.loginWithSpotify(options,function(err){
               console.log(err || 'No Error logging in with Spotify')
             })
-      },1500)
+      },2000)
+    }
+    //reload page if the currentUser newVal isn't equal to currentUser oldVal
+    if(oldVal !== newVal ){
+      setTimeout(function(){
+        location.reload()
+      },700)
     }
     console.log('watch newVal: ' + newVal,' watch oldVal: '+ oldVal)
   })
