@@ -4,8 +4,9 @@
 </head>
 <body>
   <toolbar></toolbar>
-  <!-- <div id="loggingIn" ng-show="$auth.loggingIn === true" > Logging In .....</div> -->
+  <div id="loggingIn" ng-show="$auth.loggingIn === true && !currentUser" > Logging In .....</div>
   <!-- <p> {{$auth.loggingIn}} </p> -->
   <!-- <p> typeof currentUser is {{$auth.loggingIn === false && !currentUser}} </p> -->
+  <p> Hi modulus </p>
   <div ui-view=""></div>
 </body>
