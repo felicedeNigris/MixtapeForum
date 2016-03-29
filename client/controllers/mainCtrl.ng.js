@@ -5,6 +5,10 @@ angular.module('mixtapes')
   .controller('MainCtrl', mainCtrl)
 function mainCtrl($scope){
 
+  $scope.gotospotifyLink = function(){
+    window.open('https://www.spotify.com/')
+  }
+
 	window.onload = function() {
 		var introText = document.getElementsByClassName('intro-text')[0];
 

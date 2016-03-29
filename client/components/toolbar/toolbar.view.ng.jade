@@ -8,4 +8,4 @@
   span(ng-show="$auth.currentUser")
     a(href='/mymixes' class='c-menu-button' ng-class="{clicked: activePath('/mymixes')}") My Mixes
   span
-    login-buttons
+    login-buttons(ng-click="clickedSignIn()")
