@@ -2,8 +2,8 @@
 'use strict'
 
 angular.module('mixtapes')
-  .controller('MainCtrl', mainCtrl)
-function mainCtrl($scope){
+  .controller('homeCtrl', homeCtrl)
+function homeCtrl($scope){
 
   $scope.gotospotifyLink = function(){
     window.open('https://www.spotify.com/')

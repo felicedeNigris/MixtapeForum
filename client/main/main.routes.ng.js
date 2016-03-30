@@ -8,7 +8,7 @@ angular.module('mixtapes')
       .state('main', {
         url: '/',
         templateUrl: 'client/main/main.view.html',
-        controller: 'MainCtrl'
+        controller: 'homeCtrl'
       })
       .state('mixes',{
         url:'/mixes',
@@ -18,7 +18,7 @@ angular.module('mixtapes')
       .state('create',{
         url:'/create',
         templateUrl: "client/create-a-mix/mixtapeform.html",
-        controller:'getSpotify',
+        controller:'MixList',
         resolve: {
             currentUser: function($q){
               if(Meteor.userId() === null){

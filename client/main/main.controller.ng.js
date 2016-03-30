@@ -5,6 +5,7 @@ angular.module('mixtapes')
   .controller('MixList', MixList)
 
 
+
 //The list of Mixtapes
 function MixList($scope,$meteor,$location,$reactive,$sce){
 
@@ -60,6 +61,19 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
     return track.owner === Meteor.userId()
   }//end isOwner
 
+
+  $scope.getUserPlaylists = function(){
+    Meteor.call('getUserPlaylists',function(err,data){
+      if(err){
+        console.log('playlist retrieval failed ',err)
+      }
+      else{
+        console.log('Success ',data.body)
+      }
+      return data.body
+    })
+     Session.set("playlists", data.body);
+  }
 /**********************************************************
                       MODAL POP UP
 ***********************************************************/
@@ -129,5 +143,5 @@ function MixList($scope,$meteor,$location,$reactive,$sce){
 /*********************************************
         END VOTING FEATURES
 *********************************************/
-  
+
 }
